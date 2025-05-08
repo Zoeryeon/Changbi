@@ -3,7 +3,7 @@
 
 import Gnb from '@/app/components/home/Gnb';
 import Search from '@/app/components/home/Search';
-import Submenu from '@/app/components/home/Submenu';
+import SubMenu from '@/app/components/home/SubMenu';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Header() {
@@ -124,7 +124,7 @@ export default function Header() {
         ></button>
       </div>
       <Search />
-      <Submenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+      <SubMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </header>
   );
 }

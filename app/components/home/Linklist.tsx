@@ -1,7 +1,7 @@
-//app /components /home /Linklist.tsx
+//app /components /home /LinkList.tsx
 import Link from 'next/link';
 
-export default function Linklist() {
+export default function LinkList() {
   return (
     <div className="flex gap-x-[48px] max-2xl:gap-x-[20px] max-md:gap-x-[48px]  max-sm:flex-wrap max-sm:gap-y-[20px] max-sm:gap-x-0">
       <span className="text-gray-400 text-[14px] leading-[28px] max-sm:w-[50%]">
