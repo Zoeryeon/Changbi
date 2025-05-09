@@ -10,164 +10,86 @@ export default function Gnb({
   onMouseEnter: () => void;
   onMouseLeave: () => void;
 }) {
+  // 메뉴 데이터 배열
+  const menuItems = [
+    {
+      title: '창비',
+      subItems: [
+        { name: '회사 소개', link: '/about' },
+        { name: '공동체', link: '/community' },
+        { name: '새소식', link: '/newsList?page1' },
+        { name: '오시는 길', link: '/map' },
+        { name: '채용', link: '/recruit' },
+      ],
+    },
+    {
+      title: '도서',
+      subItems: [
+        { name: '창비의 책', link: '/bookList?page=1' },
+        {
+          name: '저자',
+          link: '/authorList?regExp=%5E%5B%EA%B0%80-%EB%A7%87%5D',
+        },
+        { name: '자료실', link: '/library?category=102&page=1' },
+      ],
+    },
+    {
+      title: '매거진',
+      subItems: [
+        { name: '창작과비평', link: '/magazine' },
+        { name: '창비어린이', link: '/kidsMagazine' },
+      ],
+    },
+    {
+      title: '문학상/투고',
+      subItems: [
+        { name: '문학상/공모', link: '/contest?type=1' },
+        { name: '단행본 투고', link: '/contribute?type=1' },
+      ],
+    },
+    {
+      title: '문의',
+      subItems: [
+        { name: '1:1 문의', link: '/cs?type=ask' },
+        { name: '2차 저작권 안내', link: '/copyright' },
+      ],
+    },
+  ];
+
   return (
-    <nav className="pt-[20px]">
+    <nav
+      className="after:absolute after:left-0 after:top-0 after:w-full after:h-0 after:bg-white after:-z-1 after:transition-all after:duration-300 after:border-b after:border-b-[#e6e6e6] hover:after:h-[290px]"
+      onMouseLeave={onMouseLeave}
+    >
       <ul
-        className="flex h-[60px] gap-x-[100px] max-md:gap-x-[65px] max-sm:hidden items-center justify-between group"
+        className="flex h-[60px] gap-x-[100px] max-md:gap-x-[65px] max-sm:hidden items-center justify-between"
         onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
       >
-        <li className="h-[40px] relative leading-[40px] ">
-          <span className="inline-block relative font-bold cursor-default">
-            창비
-          </span>
-          <ul
-            className={`block absolute left-0 top-[34px] w-full pt-[24px] bg-white ${
-              gnbActive
-                ? 'opacity-100 translate-y-0 transition-opacity duration-200 delay-350'
-                : 'opacity-0 -translate-y-[200px]'
-            }`}
-          >
-            <li>
-              <Link href="/about" className="whitespace-nowrap hover:underline">
-                회사 소개
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/community"
-                className="whitespace-nowrap hover:underline"
-              >
-                공동체
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/newsList?page1"
-                className="whitespace-nowrap hover:underline"
-              >
-                새소식
-              </Link>
-            </li>
-            <li>
-              <Link href="/map" className="whitespace-nowrap hover:underline">
-                오시는 길
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/recruit"
-                className="whitespace-nowrap hover:underline"
-              >
-                채용
-              </Link>
-            </li>
-          </ul>
-        </li>
-
-        <li className="h-[40px] relative leading-[40px] group">
-          <span className="inline-block relative font-bold cursor-default">
-            도서
-          </span>
-          <ul className="block absolute left-0 top-[34px] w-full pt-[24px] bg-white opacity-0 -translate-y-[200px] group-hover:opacity-100 group-hover:translate-y-0 group-hover:transition-opacity group-hover:duration-200 group-hover:delay-350">
-            <li>
-              <Link
-                href="/bookList?page=1"
-                className="whitespace-nowrap hover:underline"
-              >
-                창비의 책
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/authorList?regExp=%5E%5B%EA%B0%80-%EB%A7%87%5D"
-                className="whitespace-nowrap hover:underline"
-              >
-                저자
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/library?category=102&page=1"
-                className="whitespace-nowrap hover:underline"
-              >
-                자료실
-              </Link>
-            </li>
-          </ul>
-        </li>
-
-        <li className="h-[40px] relative leading-[40px] group">
-          <span className="inline-block relative font-bold cursor-default">
-            매거진
-          </span>
-          <ul className="block absolute left-0 top-[34px] w-full pt-[24px] bg-white opacity-0 -translate-y-[200px] group-hover:opacity-100 group-hover:translate-y-0 group-hover:transition-opacity group-hover:duration-200 group-hover:delay-350">
-            <li>
-              <Link
-                href="/magazine"
-                className="whitespace-nowrap hover:underline"
-              >
-                창작과비평
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/kidsMagazine"
-                className="whitespace-nowrap hover:underline"
-              >
-                창비어린이
-              </Link>
-            </li>
-          </ul>
-        </li>
-
-        <li className="h-[40px] relative leading-[40px] group">
-          <span className="inline-block relative font-bold cursor-default">
-            문학상/투고
-          </span>
-          <ul className="block absolute left-0 top-[34px] w-full pt-[24px] bg-white opacity-0 -translate-y-[200px] group-hover:opacity-100 group-hover:translate-y-0 group-hover:transition-opacity group-hover:duration-200 group-hover:delay-350">
-            <li>
-              <Link
-                href="/contest?type=1"
-                className="whitespace-nowrap hover:underline"
-              >
-                문학상/공모
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contribute?type=1"
-                className="whitespace-nowrap hover:underline"
-              >
-                단행본 투고
-              </Link>
-            </li>
-          </ul>
-        </li>
-
-        <li className="h-[40px] relative leading-[40px] group">
-          <span className="inline-block relative font-bold cursor-default">
-            문의
-          </span>
-          <ul className="block absolute left-0 top-[34px] w-full pt-[24px] bg-white opacity-0 -translate-y-[200px] group-hover:opacity-100 group-hover:translate-y-0 group-hover:transition-opacity group-hover:duration-200 group-hover:delay-350">
-            <li>
-              <Link
-                href="/cs?type=ask"
-                className="whitespace-nowrap hover:underline"
-              >
-                1:1 문의
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/copyright"
-                className="whitespace-nowrap hover:underline"
-              >
-                2차 저작권 안내
-              </Link>
-            </li>
-          </ul>
-        </li>
+        {menuItems.map((menuItem, index) => (
+          <li key={index} className="h-[40px] relative leading-[40px]">
+            <span className="inline-block relative font-bold cursor-default">
+              {menuItem.title}
+            </span>
+            <ul
+              className={`block absolute left-0 top-[34px] w-full pt-[24px] bg-white ${
+                gnbActive
+                  ? 'opacity-100 translate-y-0 transition-opacity duration-200 delay-300'
+                  : 'opacity-0 -translate-y-[200px]'
+              }`}
+            >
+              {menuItem.subItems.map((subItem, subIndex) => (
+                <li key={subIndex}>
+                  <Link
+                    href={subItem.link}
+                    className="whitespace-nowrap hover:underline"
+                  >
+                    {subItem.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
       </ul>
     </nav>
   );

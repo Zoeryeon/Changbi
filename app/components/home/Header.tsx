@@ -4,35 +4,34 @@
 import Gnb from '@/app/components/home/Gnb';
 import Search from '@/app/components/home/Search';
 import SubMenu from '@/app/components/home/SubMenu';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
   const [gnbActive, setGnbActive] = useState(false);
   const [visible, setVisible] = useState(true);
-  const prevScrollY = useRef(0); // 이전 스크롤 위치를 저장할 ref
+  // const prevScrollY = useRef(0); // 이전 스크롤 위치를 저장할 ref
   // 모바일 메뉴 열기
   const [menuOpen, setMenuOpen] = useState(false);
 
   // 스크롤 이벤트 처리
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      console.log(currentScrollY);
+    let prevScrollY = 0;
 
-      // 현재 스크롤 위치와 이전 스크롤 위치 비교
-      if (currentScrollY > prevScrollY.current) {
-        // 스크롤 다운 - 특정 위치 이상 스크롤했을 때만 헤더 숨김 (50px 이상)
-        if (currentScrollY > 50) {
-          setVisible(false);
-        }
-      } else {
-        // 스크롤 업 - 헤더 표시
+    function handleScroll() {
+      let currentScrollY = window.scrollY;
+
+      // 아래로 스크롤시 헤더 안보이게
+      if (currentScrollY > prevScrollY && currentScrollY > 50) {
+        setVisible(false);
+        // 위로 스크롤시 헤더 보이게
+      } else if (currentScrollY <= prevScrollY && currentScrollY > 50) {
         setVisible(true);
       }
 
+      console.log('현재', currentScrollY, '이전', prevScrollY);
       // 현재 스크롤 위치를 이전 위치로 업데이트
-      prevScrollY.current = currentScrollY;
-    };
+      prevScrollY = currentScrollY;
+    }
 
     window.addEventListener('scroll', handleScroll);
 
@@ -52,17 +51,13 @@ export default function Header() {
 
   return (
     <header
-      className={`flex fixed px-[126px] max-2xl:px-[50px] w-full top-0 border-b border-b-[#e6e6e6] max-sm:border-none content-center bg-white justify-center z-999 ${
-        gnbActive ? 'h-[290px] duration-400' : 'h-[100px]'
-      } ${
-        visible
-          ? 'translate-y-0 duration-400'
-          : '-translate-y-[100%] duration-400'
-      } ${menuOpen ? 'max-sm:translate-x-[-260px]' : ''}`}
+      className={`flex fixed px-[126px] max-2xl:px-[50px] w-full h-[80px] max-sm:h-[60px] border-b border-b-[#e6e6e6] max-sm:border-none items-center content-center bg-white justify-center z-999 transition-all duration-400 ${
+        menuOpen ? 'top-0' : visible ? 'top-0' : '-top-[80px]'
+      }`}
     >
       <h1
         onClick={() => (window.location.href = '/')}
-        className="w-[200px] pt-[30px] absolute left-[126px] max-2xl:left-[50px] top-0"
+        className="w-[200px absolute left-[126px] max-2xl:left-[50px] top-1/2 -translate-y-1/2"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -115,13 +110,13 @@ export default function Header() {
         onMouseLeave={() => setGnbActive(false)}
       />
       <Search />
-      <div className="hidden max-md:block absolute right-[50px] max-sm:right-[80px] top-[18px]">
+      <div className="hidden max-md:block absolute right-[50px] max-sm:right-[80px] top-1/2 -translate-y-1/2">
         <button
           type="button"
           className="w-[30px] h-[60px] bg-[url('/images/mobilesearch.svg')] bg-[left_20px] bg-no-repeat"
         ></button>
       </div>
-      <div className="hidden max-sm:block absolute right-[50px] top-[18px]">
+      <div className="hidden max-sm:block absolute right-[50px] top-1/2 -translate-y-1/2">
         <button
           type="button"
           className={`w-[30px] h-[60px] bg-no-repeat bg-[100%] scale-100 ${
@@ -133,7 +128,7 @@ export default function Header() {
         ></button>
       </div>
       <Search />
-      <SubMenu isOpen={menuOpen} />
+      <SubMenu menuOpen={menuOpen} />
     </header>
   );
 }

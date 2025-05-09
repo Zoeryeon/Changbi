@@ -32,12 +32,12 @@ export default function MainLayout({
 
   return (
     <div
-      className={`transition-transform duration-300 ${
-        isMenuOpen ? '-translate-x-[260px]' : ''
+      className={`relative transition-all duration-300 ${
+        isMenuOpen ? '-left-[260px]' : 'left-0'
       }`}
     >
       <Header />
-      <main id="main-content">{children}</main>
+      {children}
       <Footer />
     </div>
   );

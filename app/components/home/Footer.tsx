@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="block py-[80px] px-[126px] max-2xl:px-[50px] bg-white border-t border-t-[#e6e6e6]">
+    <footer className="block py-[80px] px-[126px] max-2xl:px-[50px] bg-white border-t border-t-[#e6e6e6] max-md:pt-[40px] max-md:px-[60px] max-md:pd-[90px] max-sm:px-[40px] max-sm:pd-[60px]">
       <img
         src="/images/footerlogo.svg"
         alt="푸터로고"
