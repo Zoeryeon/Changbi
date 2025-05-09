@@ -11,7 +11,7 @@ export default function NewBook() {
       id: 4537,
       title: '새벽 탐험',
       author: '슷카이',
-      image: '/images/250429_b292bdfd-604a-4f85-9649-ca580ac63b05.jpg',
+      image: '/images/books/250429_b292bdfd-604a-4f85-9649-ca580ac63b05.jpg',
       series: '',
       date: '2025.05.05',
       price: '16,800원',
@@ -21,7 +21,7 @@ export default function NewBook() {
       id: 4537,
       title: '작은 것들에 입술을 달아주고',
       author: '이근화',
-      image: '/images/250425_ef5b69ee-18ea-4cdd-ba84-7069553ba84e.jpg',
+      image: '/images/books/250425_ef5b69ee-18ea-4cdd-ba84-7069553ba84e.jpg',
       series: '에세이& 08',
       date: '2025.04.30',
       price: '15,000원',
@@ -31,7 +31,7 @@ export default function NewBook() {
       id: 4537,
       title: '건전지 할머니',
       author: '강인숙, 전승배',
-      image: '/images/250424_56a4dcdd-c66e-47b5-b7a2-06e0f75c2ec2.jpg',
+      image: '/images/books/250424_56a4dcdd-c66e-47b5-b7a2-06e0f75c2ec2.jpg',
       series: '건전지 가족',
       date: '2025.04.28',
       price: '16,800원',
@@ -41,7 +41,7 @@ export default function NewBook() {
       id: 4537,
       title: '망할 토마토, 기막힌 가지',
       author: '박찬일',
-      image: '/images/250421_776e181a-ff69-47cb-abcf-06cbb3f272bd.jpg',
+      image: '/images/books/250421_776e181a-ff69-47cb-abcf-06cbb3f272bd.jpg',
       series: '',
       date: '2025.04.28',
       price: '15,000원',
@@ -51,7 +51,7 @@ export default function NewBook() {
       id: 4537,
       title: '우리 없이 빛난 아침',
       author: '최현우',
-      image: '/images/250418_d38d2434-da2e-4a4a-980c-43b449c722ae.jpg',
+      image: '/images/books/250418_d38d2434-da2e-4a4a-980c-43b449c722ae.jpg',
       series: '창비시선 517',
       date: '2025.04.25',
       price: '13,000원',
@@ -61,7 +61,7 @@ export default function NewBook() {
       id: 4537,
       title: '처음 만나는 헌법',
       author: '차병직',
-      image: '/images/250418_23cb7ade-6387-4e4a-9aa6-a9a471ff8436.jpg',
+      image: '/images/books/250418_23cb7ade-6387-4e4a-9aa6-a9a471ff8436.jpg',
       series: '교양100그램 6',
       date: '2025.04.18',
       price: '12,000원',
@@ -71,7 +71,7 @@ export default function NewBook() {
       id: 4537,
       title: '나는 빠리의 택시운전사(개정증보판)',
       author: '홍세화',
-      image: '/images/250415_14261078-b049-4e81-84ea-34a74ee7362c.jpg',
+      image: '/images/books/250415_14261078-b049-4e81-84ea-34a74ee7362c.jpg',
       series: '',
       date: '2025.04.11',
       price: '22,000원',
@@ -81,7 +81,7 @@ export default function NewBook() {
       id: 4537,
       title: '스파클',
       author: '최현진',
-      image: '/images/250414_165e3f75-a9b4-4140-b819-e8f3f7640598.jpg',
+      image: '/images/books/250414_165e3f75-a9b4-4140-b819-e8f3f7640598.jpg',
       series: '창비청소년문학 134',
       date: '2025.04.11',
       price: '15,000원',
@@ -138,7 +138,7 @@ export default function NewBook() {
                 <div className="relative overflow-hidden border border-[#e6e6e6]">
                   <img
                     src={book.image}
-                    alt={book.alt}
+                    alt="신간"
                     className="w-full h-auto align-baseline -mb-[5px]"
                   />
                   <div className="absolute bottom-0 p-[16px] bg-[#00001480] leading-[28px] w-full flex flex-col backdrop-blur-sm text-[#eee] text-[14px] transition-transform duration-300 translate-y-[100%] group-hover:translate-y-0 max-sm:leading-[26px]">
