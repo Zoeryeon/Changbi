@@ -41,6 +41,15 @@ export default function Header() {
     };
   }, []); // 의존성 배열에서 scrollY 제거
 
+  // 메뉴 상태가 변경될 때 body에 클래스를 추가/제거하여 전체 화면 이동을 제어
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  }, [menuOpen]);
+
   return (
     <header
       className={`flex fixed px-[126px] max-2xl:px-[50px] w-full top-0 border-b border-b-[#e6e6e6] max-sm:border-none content-center bg-white justify-center z-999 ${
@@ -49,7 +58,7 @@ export default function Header() {
         visible
           ? 'translate-y-0 duration-400'
           : '-translate-y-[100%] duration-400'
-      }`}
+      } ${menuOpen ? 'max-sm:translate-x-[-260px]' : ''}`}
     >
       <h1
         onClick={() => (window.location.href = '/')}
@@ -124,7 +133,7 @@ export default function Header() {
         ></button>
       </div>
       <Search />
-      <SubMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+      <SubMenu isOpen={menuOpen} />
     </header>
   );
 }
