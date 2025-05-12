@@ -1,7 +1,6 @@
 // mocks/handlers.ts
 import { http, HttpResponse } from 'msw';
 import user from './user.json';
-import { request } from 'http';
 
 let maxId = Math.max(...user.map((item) => item.id));
 

@@ -113,7 +113,7 @@
     "id": 12,
     "title": "혼모노",
     "author": "성해나",
-    "image": "/images/books/250328_788e0b52-016d-47e4-8fb3-355ea02a9a63.jpg",
+    "image": "/images/books/250326_033ef66e-e98f-4488-b5d8-bf583dd7576a.jpg",
     "series": "",
     "date": "2025.03.28",
     "price": "18,000원",
@@ -133,7 +133,7 @@
     "id": 14,
     "title": "감자의 멜랑콜리",
     "author": "이기성",
-    "image": "/images/books/250327_2182265c-3e31-4241-81c4-cbe42cc65a00.jpg",
+    "image": "/images/books/250321_8e056a49-d177-4fe4-a9a8-6aebf3fb4e50.jpg",
     "series": "창비시선 515",
     "date": "2025.03.25",
     "price": "16,800원",
@@ -141,27 +141,27 @@
   },
 
   {
-    "id": 14,
+    "id": 15,
     "title": "달콤 짭짤 코파츄 4",
     "author": "다영, 밤코",
     "image": "/images/books/250321_1673dc62-f922-4cd8-8fa9-478efdd969d1.jpg",
     "series": "달콤 짭짤 코파츄",
     "date": "2025.03.21",
     "price": "15,000원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 16,
     "title": "당근이세요?",
     "author": "표명희",
     "image": "/images/books/250321_a791f1b3-4d96-4b68-b435-37c129471006.jpg",
     "series": "창비청소년문학 133",
     "date": "2025.03.21",
     "price": "15,000원",
-    "category": "문학"
+    "category": "청소년"
   },
   {
-    "id": 14,
+    "id": 17,
     "title": "옥상에서 만나요(개정판)",
     "author": "정세랑",
     "image": "/images/books/250319_dfaee3c8-e792-4c9d-811c-1d81fc0adfdc.jpg",
@@ -171,57 +171,57 @@
     "category": "문학"
   },
   {
-    "id": 14,
+    "id": 18,
     "title": "4×4의 세계",
     "author": "조우리, 노인경",
     "image": "/images/books/250313_9bfd57ff-dd7f-4e83-be82-064d81abe1e9.jpg",
     "series": "청비아동문고 341",
     "date": "2025.03.14",
     "price": "13,800원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 19,
     "title": "나는 왜 이유 없이 불안할까",
     "author": "하지현",
     "image": "/images/books/250313_053e0f28-74da-4305-9488-c85b3627f08f.jpg",
     "series": "교양100그램",
     "date": "2025.03.14",
     "price": "12,000원",
-    "category": "문학"
+    "category": "인문교양"
   },
   {
-    "id": 14,
+    "id": 20,
     "title": "소",
     "author": "권정생, 김병하",
     "image": "/images/books/250228_552ad871-20e8-4639-b466-c267a81a34fc.jpg",
     "series": "권정생 문학 그림책",
     "date": "2025.03.07",
     "price": "16,800원",
-    "category": "문학"
+    "category": "그림책"
   },
   {
-    "id": 14,
+    "id": 21,
     "title": "창비어린이 88호(2025년 봄호)",
     "author": "",
     "image": "/images/books/250227_5ffd672d-e4f1-4f1e-a96d-b6ba2a437fa4.jpg",
     "series": "",
     "date": "2025.03.01",
     "price": "13,800원",
-    "category": "문학"
+    "category": "정기간행물"
   },
   {
-    "id": 14,
+    "id": 22,
     "title": "창작과비평 207호(2025년 봄호)",
     "author": "",
     "image": "/images/books/250226_f26c661b-11a0-4a35-86cf-36ff3e04ad4a.jpg",
     "series": "",
     "date": "2025.03.01",
     "price": "18,000원",
-    "category": "문학"
+    "category": "정기간행물"
   },
   {
-    "id": 14,
+    "id": 23,
     "title": "언젠가 모든 것은 바다로 떨어진다",
     "author": "세라 핀스커, 정서현",
     "image": "/images/books/250225_f0494eef-c935-4c33-88f9-e9fcf9cdeaa0.jpg",
@@ -231,7 +231,7 @@
     "category": "문학"
   },
   {
-    "id": 14,
+    "id": 24,
     "title": "삶의 어떤 기술",
     "author": "윤유나",
     "image": "/images/books/250224_1ba1c142-8400-40e3-a69b-6d1fa0ea5fbf.jpg",
@@ -241,7 +241,7 @@
     "category": "문학"
   },
   {
-    "id": 14,
+    "id": 25,
     "title": "느리게 가는 마음",
     "author": "윤성희",
     "image": "/images/books/250228_3c7b49a3-81a2-4fd7-a379-e388e07cc3d9.jpg",
@@ -251,87 +251,87 @@
     "category": "문학"
   },
   {
-    "id": 14,
+    "id": 26,
     "title": "아무거나 문방구 2",
     "author": "정은정, 유시연",
     "image": "/images/books/250221_0c63660f-07ac-4a0e-b9b6-971055f0d399.jpg",
     "series": "아무거나 문방구",
     "date": "2025.02.25",
     "price": "15,000원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 27,
     "title": "팥빙수 눈사람 펑펑 2",
     "author": "나은, 보람",
     "image": "/images/books/250221_5d9ee2ad-9bfd-4423-947d-81aa39edcfe2.jpg",
     "series": "팥빙수 눈사람 펑펑",
     "date": "2025.02.21",
     "price": "14,000원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 28,
     "title": "속지 마! 왕재미 3",
     "author": "다영, 유영근",
     "image": "/images/books/250221_f6a22007-8e9c-4cda-93ea-c847aa60f843.jpg",
     "series": "속지 마! 왕재미",
     "date": "2025.02.21",
     "price": "15,000원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 29,
     "title": "밤 버스에 달이 타 있어",
     "author": "성명진, 핸짱",
     "image": "/images/books/250217_bdf7c121-20b7-455a-8101-b538b2247199.jpg",
     "series": "",
     "date": "2025.02.17",
     "price": "13,000원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 30,
     "title": "어떤 패배의 기록",
     "author": "김항",
     "image": "/images/books/250227_73a986bd-e4d3-44d2-80a3-5998d2a8d33e.jpg",
     "series": "전후 일본의 비평, 민주주의, 혁명",
     "date": "2025.02.14",
     "price": "20,000원",
-    "category": "문학"
+    "category": "인문교양"
   },
   {
-    "id": 14,
+    "id": 31,
     "title": "문명전환의 한국사상",
     "author": "강경석, 김용휘, 백민정, 백영서, 이정배, 이행훈, 정혜정, 조성환, 허석, 황정아",
     "image": "/images/books/250217_51333fd1-2db5-47e8-b283-dfe8f4f098dc.jpg",
     "series": "개벽의 사상사 2",
     "date": "2025.02.07",
     "price": "24,000원",
-    "category": "문학"
+    "category": "인문교양"
   },
   {
-    "id": 14,
+    "id": 32,
     "title": "소설의 첫만남: 첫사랑 세트(전3권)",
     "author": "정은숙, 장보송, 백온유, joggen, 이희영, 양양",
     "image": "/images/books/250211_06563638-3299-4914-b73a-f8a94003cc0c.jpg",
     "series": "",
     "date": "2025.02.07",
     "price": "30,000원",
-    "category": "문학"
+    "category": "청소년"
   },
   {
-    "id": 14,
+    "id": 33,
     "title": "범고래 씨 인터뷰",
     "author": "이대일, 다나",
     "image": "/images/books/250206_e0bf2f9f-0971-43e6-9166-4cc26a48a1b0.jpg",
     "series": "",
     "date": "2025.02.07",
     "price": "13,000원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 34,
     "title": "머리에 고가철도를 쓰고",
     "author": "채호기",
     "image": "/images/books/250207_96103c31-2601-4ab3-b824-0c429bf87fa5.jpg",
@@ -341,7 +341,7 @@
     "category": "문학"
   },
   {
-    "id": 14,
+    "id": 35,
     "title": "내가 사랑한 거짓말",
     "author": "장석남",
     "image": "/images/books/250131_30035443-09cf-4491-a436-8d79c3340c39.jpg",
@@ -351,47 +351,47 @@
     "category": "문학"
   },
   {
-    "id": 14,
+    "id": 36,
     "title": "정선 목민심서",
     "author": "정약용, 다산연구회",
     "image": "/images/books/250204_4c870a6b-9d26-47b1-b7fb-a7f16ddd3bd2.jpg",
     "series": "다산의 지혜",
     "date": "2025.01.24",
     "price": "24,000원",
-    "category": "문학"
+    "category": "인문교양"
   },
   {
-    "id": 14,
+    "id": 37,
     "title": "유배지에서 보낸 편지",
     "author": "정약용, 박석무",
     "image": "/images/books/250204_99bbb966-6455-485a-9777-894d91df7161.jpg",
     "series": "다산의 지혜",
     "date": "2025.01.24",
     "price": "24,000원",
-    "category": "문학"
+    "category": "인문교양"
   },
   {
-    "id": 14,
+    "id": 38,
     "title": "남자는 왜 친구가 없을까",
     "author": "맥스 디킨스, 이경태",
     "image": "/images/books/250124_230f8ccf-5a81-44f9-ae83-6b6f4c14fb15.jpg",
     "series": "인간관계가 고장난 사람들에 관하여",
     "date": "2025.01.24",
     "price": "24,000원",
-    "category": "문학"
+    "category": "인문교양"
   },
   {
-    "id": 14,
+    "id": 39,
     "title": "까치 복덕방",
     "author": "국지승",
     "image": "/images/books/250121_325ac22e-32bd-4d3c-bf1b-b23ff2d4b945.jpg",
     "series": "",
     "date": "2025.01.24",
     "price": "15,800원",
-    "category": "문학"
+    "category": "그림책"
   },
   {
-    "id": 14,
+    "id": 40,
     "title": "시로 채우는 내 마음 필사노트",
     "author": "황인찬 회",
     "image": "/images/books/250117_7085b74e-c51e-4663-bbb1-b1be0db6d187.jpg",
@@ -401,47 +401,47 @@
     "category": "문학"
   },
   {
-    "id": 14,
+    "id": 41,
     "title": "위풍당당 여우 꼬리 6",
     "author": "황인찬 회",
     "image": "/images/books/250117_d84bd051-14f2-4a60-9ef1-668f769b7be3.jpg",
     "series": "위풍당당 여우 꼬리",
     "date": "2025.01.17",
     "price": "15,000원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 42,
     "title": "새처럼",
     "author": "포푸라기",
     "image": "/images/books/250109_11e3dff5-b19b-49e3-9898-09399aa4dc88.jpg",
     "series": "",
     "date": "2025.01.10",
     "price": "16,800원",
-    "category": "문학"
+    "category": "그림책"
   },
   {
-    "id": 14,
+    "id": 43,
     "title": "마음속 딱 한 글자",
     "author": "김응, 이주희",
     "image": "/images/books/250109_a7efcd66-b5d2-4892-9c71-79d59f3d0f84.jpg",
     "series": "동시집",
     "date": "2025.01.10",
     "price": "13,000원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 44,
     "title": "허밍",
     "author": "최정원",
     "image": "/images/books/250109_9c569082-61d3-4db4-92eb-2b26368bfd3e.jpg",
     "series": "소설Y",
     "date": "2025.01.10",
     "price": "16,000원",
-    "category": "문학"
+    "category": "청소년"
   },
   {
-    "id": 14,
+    "id": 45,
     "title": "허밍",
     "author": "최정원",
     "image": "/images/books/250109_ef039f1c-7580-40bb-9a37-9d1c8845d3fa.jpg",
@@ -451,37 +451,37 @@
     "category": "문학"
   },
   {
-    "id": 14,
+    "id": 46,
     "title": "울지 않는 달",
     "author": "이지은",
     "image": "/images/books/250102_61ac4229-41a8-4dd5-8922-a30e6ab1cd94.jpg",
     "series": "",
     "date": "2025.01.03",
     "price": "16,000원",
-    "category": "문학"
+    "category": "청소년"
   },
   {
-    "id": 14,
+    "id": 47,
     "title": "버찌의 선택",
     "author": "이정란, 지문",
     "image": "/images/books/241226_567228d0-6444-4356-8fd3-c054232d22ea.jpg",
     "series": "신나는 책일기 67",
     "date": "2025.01.03",
     "price": "12,800원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 48,
     "title": "내 친구 도감",
     "author": "김원아, 주쓰",
     "image": "/images/books/241226_ac99470f-cccd-422d-a7b2-67cd63afd992.jpg",
     "series": "학교생활 잘하는 법",
     "date": "2025.01.03",
     "price": "15,800원",
-    "category": "문학"
+    "category": "그림책"
   },
   {
-    "id": 14,
+    "id": 49,
     "title": "역사 앞에 선 한국문학",
     "author": "염무웅",
     "image": "/images/books/241224_726ec9e9-5c48-424f-9160-46671db170b6.jpg",
@@ -491,83 +491,513 @@
     "category": "문학"
   },
   {
-    "id": 14,
+    "id": 50,
     "title": "불량한 자전거 여행(개정판)",
     "author": "김남중, 허태준",
     "image": "/images/books/241219_d321b1b2-9620-4c43-8fd3-4fb76d8b8879.jpg",
     "series": "창비아동문고 250",
     "date": "2024.12.20",
     "price": "13,800원",
-    "category": "문학"
+    "category": "어린이"
   },
   {
-    "id": 14,
+    "id": 51,
     "title": "가족의 모양",
     "author": "전미화",
     "image": "/images/books/241219_cc3c6b7c-0c62-4146-97d2-d58e3e96491c.jpg",
     "series": "",
     "date": "2024.12.20",
     "price": "15,800원",
-    "category": "문학"
+    "category": "그림책"
   },
   {
-    "id": 14,
+    "id": 52,
     "title": "국어 교과서 작품 읽기: 고등 세트(최신 개정판)",
     "author": "남호섭, 이종은, 서덕희, 최은영, 김선형, 조인혜",
     "image": "/images/books/241218_56e9067e-966c-4325-94fe-b2e43dcdb3d9.png",
     "series": "국어 교과서 작품 읽기",
     "date": "2024.12.20",
     "price": "60,000원",
-    "category": "문학"
+    "category": "청소년"
   },
   {
-    "id": 14,
+    "id": 53,
     "title": "국어 교과서 작품 읽기: 고등 소설 하(최신 개정판)",
     "author": "서덕희, 최은영",
     "image": "/images/books/241218_a63564b2-4d05-402b-8dfb-197430edad87.jpg",
     "series": "국어 교과서 작품 읽기",
     "date": "2024.12.20",
     "price": "15,000원",
-    "category": "문학"
+    "category": "청소년"
   },
   {
-    "id": 14,
+    "id": 54,
     "title": "국어 교과서 작품 읽기: 고등 소설 상(최신 개정판)",
     "author": "서덕희, 최은영",
     "image": "/images/books/241218_42a27444-1a55-44f5-8e34-4b8e346ae335.jpg",
     "series": "국어 교과서 작품 읽기",
     "date": "2024.12.20",
     "price": "15,000원",
-    "category": "문학"
+    "category": "청소년"
   },
   {
-    "id": 14,
+    "id": 55,
     "title": "시간 불평등",
     "author": "가이 스탠딩, 안효상",
     "image": "/images/books/241216_b97b373c-924c-40af-a2d5-dcd766d666e0.jpg",
     "series": "시간의 자유는 어떻게 특권이 되었나",
     "date": "2024.12.13",
     "price": "28,000원",
-    "category": "문학"
+    "category": "인문교양"
   },
   {
-    "id": 14,
+    "id": 56,
     "title": "호시탐탐",
     "author": "국가인권위원회, 김보통, 서이레, 요니요니, 김금숙, 김정연, 구희, 정영롱, 최경민",
-    "image": "/images/books/241216_b97b373c-924c-40af-a2d5-dcd766d666e0.jpg",
+    "image": "/images/books/241128_cf13d04f-9511-4a5d-9f2a-691a4614fc53.jpg",
     "series": "창비인권만화 4",
     "date": "2024.12.10",
     "price": "19,000원",
-    "category": "문학"
+    "category": "만화"
   },
   {
-    "id": 14,
+    "id": 57,
     "title": "창비어린이 87호(2024년 겨울호)",
     "author": "",
     "image": "/images/books/241127_91083a8a-3b8e-46b5-a40e-39ec5b209a73.jpg",
     "series": "",
     "date": "2024.12.01",
     "price": "13,800원",
+    "category": "정기간행물"
+  },
+  {
+    "id": 58,
+    "title": "꿀잠 선물 가게",
+    "author": "박초은, 모차",
+    "image": "/images/books/241115_b4a72587-8f49-44d1-afca-1b6fbd110c0d.jpg",
+    "series": "",
+    "date": "2024.11.15",
+    "price": "17,000원",
+    "category": "토닥스토리"
+  },
+  {
+    "id": 59,
+    "title": "엄마보다 큰 세상을 너에게 줄게",
+    "author": "이수련",
+    "image": "/images/books/240603_b9811b7f-ad09-4192-8346-e3c38070e26b.jpg",
+    "series": "",
+    "date": "2024.10.30",
+    "price": "15,000원",
+    "category": "교사 및 부모"
+  },
+  {
+    "id": 60,
+    "title": "우리 아이 첫 반려동물",
+    "author": "이원영",
+    "image": "/images/books/231214_e13160a6-41b4-40aa-8360-697a0b510dfb.jpg",
+    "series": "동물을 입양하기 전 생각할 것들",
+    "date": "2024.10.15",
+    "price": "14,000원",
+    "category": "교사 및 부모"
+  },
+  {
+    "id": 61,
+    "title": "창작과비평 206호(2024년 겨울호)",
+    "author": "",
+    "image": "/images/books/241126_5b8ad758-22a2-4188-851d-116c954800df.jpg",
+    "series": "",
+    "date": "2024.10.01",
+    "price": "18,000원",
+    "category": "정기간행물"
+  },
+  {
+    "id": 62,
+    "title": "그림책, 어떻게 읽어 줄까?",
+    "author": "이임숙",
+    "image": "/images/books/20220624_035129_thumb.jpg",
+    "series": "",
+    "date": "2024.09.24",
+    "price": "16,000원",
+    "category": "교사 및 부모"
+  },
+  {
+    "id": 63,
+    "title": "너와 나의 퍼즐",
+    "author": "김규아",
+    "image": "/images/books/240919_ebfcd424-d971-413c-a7a5-d11f6a025736.jpg",
+    "series": "",
+    "date": "2024.09.20",
+    "price": "25,000원",
+    "category": "만화"
+  },
+  {
+    "id": 64,
+    "title": "탐정 칸",
+    "author": "하민석",
+    "image": "/images/books/221118_50d2fa89-2d8c-4d8e-a64e-61b97aefb5b5.jpg",
+    "series": "부리부리단의 습격",
+    "date": "2024.09.11",
+    "price": "20,000원",
+    "category": "만화"
+  },
+  {
+    "id": 65,
+    "title": "뒤늦은 답장",
+    "author": "정원",
+    "image": "/images/books/220920_a961866b-2ebd-4a8e-b4c4-07c7cbaecf5d.jpg",
+    "series": "창비만화도서관 8",
+    "date": "2024.09.02",
+    "price": "16,000원",
+    "category": "만화"
+  },
+  {
+    "id": 66,
+    "title": "선생님, 오늘도 무사히",
+    "author": "김현수",
+    "image": "/images/books/20210716_003027_thumb.jpg",
+    "series": "교사의 소진과 트라우마 치유 심리학",
+    "date": "2024.08.27",
+    "price": "16,800원",
+    "category": "교사 및 부모"
+  },
+  {
+    "id": 67,
+    "title": "포스트 코로나, 아이들 마음부터 챙깁니다",
+    "author": "하지현",
+    "image": "/images/books/20210601_081023_thumb.jpg",
+    "series": "",
+    "date": "2024.08.16",
+    "price": "14,800원",
+    "category": "교사 및 부모"
+  },
+  {
+    "id": 68,
+    "title": "세상",
+    "author": "강경수",
+    "image": "/images/books/세상_표1.jpg",
+    "series": "",
+    "date": "2024.08.09",
+    "price": "16,800원",
+    "category": "그림책"
+  },
+  {
+    "id": 69,
+    "title": "창비어린이 86호(2024년 가을호)",
+    "author": "",
+    "image": "/images/books/240902_95999269-3c3d-4959-ad2f-ea875b090c12.jpg",
+    "series": "",
+    "date": "2024.08.01",
+    "price": "13,800원",
+    "category": "정기간행물"
+  },
+  {
+    "id": 70,
+    "title": "창작과비평 205호(2024년 가을호)",
+    "author": "",
+    "image": "/images/books/240826_ab8a89b3-f15e-4511-b10d-c6a2781dccc5.jpg",
+    "series": "",
+    "date": "2024.08.01",
+    "price": "18,000원",
+    "category": "정기간행물"
+  },
+  {
+    "id": 71,
+    "title": "스페인 모로코 인문 기행",
+    "author": "김종엽",
+    "image": "/images/books/241213_a8e5dc71-6dcd-4284-ac5b-64edc8e1601d.jpg",
+    "series": "타오르는 시간",
+    "date": "2024.07.28",
+    "price": "48,000원",
+    "category": "인문교양"
+  },
+  {
+    "id": 72,
+    "title": "세계적 K사상을 위하여",
+    "author": "백남청, 오강남, 백민정, 전도연, 이보현, 고명섭",
+    "image": "/images/books/241122_4b29e48b-f46a-4ea6-b600-fd4d2c3e9ca0.jpg",
+    "series": "개벽사상과 종교공부2",
+    "date": "2024.07.22",
+    "price": "25,000원",
+    "category": "인문교양"
+  },
+  {
+    "id": 73,
+    "title": "갈라떼아",
+    "author": "미겔 데 세르반떼스, 최낙원",
+    "image": "/images/books/241127_eac59a66-696e-4470-9ad4-a126e21c705d.jpg",
+    "series": "창비세계문학 101",
+    "date": "2024.07.14",
+    "price": "21,000원",
     "category": "문학"
+  },
+  {
+    "id": 74,
+    "title": "타운하우스",
+    "author": "전지영",
+    "image": "/images/books/241129_cf0e81d9-0bb7-4f01-ab49-fe0e053a439d.jpg",
+    "series": "창비 소설선",
+    "date": "2024.07.09",
+    "price": "17,000원",
+    "category": "문학"
+  },
+  {
+    "id": 75,
+    "title": "이웃집 빙허각",
+    "author": "채은하, 박재인",
+    "image": "/images/books/241121_c3d2e87b-b897-441c-97d5-0dda33070192.jpg",
+    "series": "창비아동문고 340",
+    "date": "2024.07.03",
+    "price": "13,800원",
+    "category": "어린이"
+  },
+  {
+    "id": 76,
+    "title": "꿈의 아이돌 타라",
+    "author": "김리나, 김래현",
+    "image": "/images/books/241118_f06838f3-cc99-4eff-b4db-3cfafc5cb311.jpg",
+    "series": "취미는 수학, 무대는 운명",
+    "date": "2024.06.28",
+    "price": "15,000원",
+    "category": "어린이"
+  },
+  {
+    "id": 77,
+    "title": "의사로 일하는 상상 어때?",
+    "author": "김준혁, 이다혜",
+    "image": "/images/books/241206_0e34f26d-a5bf-43c4-9b6c-e1d90fe260b0.jpg",
+    "series": "발견의 첫걸음 11",
+    "date": "2024.06.22",
+    "price": "13,000원",
+    "category": "청소년"
+  },
+  {
+    "id": 78,
+    "title": "회색에서 왔습니다",
+    "author": "한요나",
+    "image": "/images/books/241114_ca76c2ff-786c-498a-b124-daf3e067309d.jpg",
+    "series": "창비청소년문학 131",
+    "date": "2024.06.10",
+    "price": "15,000원",
+    "category": "청소년"
+  },
+  {
+    "id": 79,
+    "title": "사랑하는 이모들",
+    "author": "근하",
+    "image": "/images/books/20220617_002358_thumb.jpg",
+    "series": "창비만화도서관 7",
+    "date": "2024.06.07",
+    "price": "15,000원",
+    "category": "만화"
+  },
+  {
+    "id": 80,
+    "title": "우리의 제철은 지금",
+    "author": "섬멍",
+    "image": "/images/books/20220408_023108_thumb.jpg",
+    "series": "",
+    "date": "2024.06.01",
+    "price": "14,000원",
+    "category": "만화"
+  },
+  {
+    "id": 81,
+    "title": "혼자 입원했습니다",
+    "author": "다드래기",
+    "image": "/images/books/20210906_043806_thumb.jpg",
+    "series": "요절복통 비혼 여성 수술일기",
+    "date": "2024.05.30",
+    "price": "18,000원",
+    "category": "만화"
+  },
+  {
+    "id": 82,
+    "title": "아이의 방문을 열기 전에",
+    "author": "이임숙",
+    "image": "/images/books/20190722_050728_thumb.jpg",
+    "series": "10대의 마음을 여는 부모의 대화법",
+    "date": "2024.05.29",
+    "price": "15,000원",
+    "category": "교사 및 부모"
+  },
+  {
+    "id": 83,
+    "title": "응급의학과 의사 아빠의 안전한 육아",
+    "author": "김현종",
+    "image": "/images/books/20190327_054747_thumb.jpg",
+    "series": "",
+    "date": "2024.05.22",
+    "price": "14,800원",
+    "category": "교사 및 부모"
+  },
+  {
+    "id": 84,
+    "title": "핑크와 블루를 넘어서",
+    "author": "크리스티아 스치어스 브라운, 안진희",
+    "image": "/images/books/20181106_020248_thumb.jpg",
+    "series": "젠더 고정관념 없이 아이 키우기",
+    "date": "2024.05.14",
+    "price": "15,800원",
+    "category": "교사 및 부모"
+  },
+  {
+    "id": 85,
+    "title": "창비어린이 85호(2024년 여름호)",
+    "author": "창비어린이",
+    "image": "/images/books/240529_5893f2dd-fab9-4421-8a20-08ee6e9afdb1.jpg",
+    "series": "",
+    "date": "2024.05.11",
+    "price": "13,800원",
+    "category": "정기간행물"
+  },
+  {
+    "id": 86,
+    "title": "창작과비평 204호(2024년 여름호)",
+    "author": "",
+    "image": "/images/books/240527_71767114-200a-4a36-93dc-bc8f2ba9ea22.jpg",
+    "series": "",
+    "date": "2024.05.11",
+    "price": "18,000원",
+    "category": "정기간행물"
+  },
+  {
+    "id": 87,
+    "title": "나의 인생만사 답사기",
+    "author": "유홍준",
+    "image": "/images/books/241029_784a7e92-6527-42f8-ab79-a7e0fe54899a.jpg",
+    "series": "유홍준 잡문집",
+    "date": "2024.05.01",
+    "price": "22,000원",
+    "category": "인문교양"
+  },
+  {
+    "id": 88,
+    "title": "참사는 골목에 머물지 않는다",
+    "author": "10·29 이태원 참사 작가기록단",
+    "image": "/images/books/241018_d31fb865-d3c7-45f4-ad86-e5ca75f7364b.jpg",
+    "series": "이태원 참사 가족들이 길 위에 새겨온 730일의 이야기",
+    "date": "2024.04.29",
+    "price": "22,000원",
+    "category": "인문교양"
+  },
+  {
+    "id": 89,
+    "title": "반계수록 1",
+    "author": "유형원, 익선재강독회, 임형택",
+    "image": "/images/books/241021_742e0251-c5ef-4a0c-8020-966742acc44f.jpg",
+    "series": "토지제도",
+    "date": "2024.04.20",
+    "price": "42,000원",
+    "category": "인문교양"
+  },
+  {
+    "id": 90,
+    "title": "비판적 에코페미니즘",
+    "author": "그레타가드, 김현미, 노고운, 박혜영, 이윤숙, 황선애",
+    "image": "/images/books/240823_4b9a057c-123a-4853-af4b-d2fe02ee3526.jpg",
+    "series": "",
+    "date": "2024.04.13",
+    "price": "25,000원",
+    "category": "인문교양"
+  },
+  {
+    "id": 91,
+    "title": "너는 작은 친구 이지룡",
+    "author": "윤성은, 보람",
+    "image": "/images/books/241024_4cff58f8-8abd-4892-a2f6-7639bf42c88d.jpg",
+    "series": "신나는 책읽기 66",
+    "date": "2024.04.05",
+    "price": "12,800원",
+    "category": "어린이"
+  },
+  {
+    "id": 92,
+    "title": "왜왜왜 동아리",
+    "author": "진형민, 이윤희",
+    "image": "/images/books/241017_3e62d171-c981-4969-b954-11a34ab5e259.jpg",
+    "series": "창비아동문고 339",
+    "date": "2024.03.28",
+    "price": "13,800원",
+    "category": "어린이"
+  },
+  {
+    "id": 93,
+    "title": "채널명은 비밀입니다",
+    "author": "전수경",
+    "image": "/images/books/240919_75eb64da-bd1b-41cd-88c0-2502ffd043f3.jpg",
+    "series": "창비청소년문학 129",
+    "date": "2024.03.20",
+    "price": "13,000원",
+    "category": "청소년"
+  },
+  {
+    "id": 94,
+    "title": "너의 초록에 닿으면",
+    "author": "배미주",
+    "image": "/images/books/240814_17935a0e-7e56-49d5-99ac-572381649e35.jpg",
+    "series": "창비청소년문학 128",
+    "date": "2024.03.16",
+    "price": "13,000원",
+    "category": "청소년"
+  },
+  {
+    "id": 95,
+    "title": "점과 선과 새",
+    "author": "조오",
+    "image": "/images/books/240724_33adf1b5-d241-4045-afae-2b6cf8c3258a.jpg",
+    "series": "",
+    "date": "2024.03.10",
+    "price": "16,000원",
+    "category": "그림책"
+  },
+  {
+    "id": 96,
+    "title": "내가 있어요",
+    "author": "김효은",
+    "image": "/images/books/240719_773233d8-7b7f-458c-96b3-f99887553ccb.jpg",
+    "series": "창비 아기책",
+    "date": "2024.03.08",
+    "price": "16,000원",
+    "category": "그림책"
+  },
+  {
+    "id": 97,
+    "title": "그림책으로 읽는 아이들 마음",
+    "author": "서천석",
+    "image": "/images/books/20150703_063810_thumb.jpg",
+    "series": "소아정신과 의사 서천석의",
+    "date": "2024.03.06",
+    "price": "17,800원",
+    "category": "교사 및 부모"
+  },
+  {
+    "id": 98,
+    "title": "마음의 반창고",
+    "author": "방승호",
+    "image": "/images/books/20170120_024058_thumb.jpg",
+    "series": "노래하는 교장 방승호의",
+    "date": "2024.03.04",
+    "price": "13,800원",
+    "category": "교사 및 부모"
+  },
+  {
+    "id": 99,
+    "title": "창비어린이 84호(2024년 봄호)",
+    "author": "창비어린이",
+    "image": "/images/books/240228_55c28bd6-4bc4-4e7d-a93a-b9199578ff0c.jpg",
+    "series": "",
+    "date": "2024.03.01",
+    "price": "13,800원",
+    "category": "정기간행물"
+  },
+  {
+    "id": 100,
+    "title": "창작과비평 203호(2024년 봄호)",
+    "author": "",
+    "image": "/images/books/240220_d1b76641-a7fd-4d7f-b14f-bf38d2cb5b84.jpg",
+    "series": "",
+    "date": "2024.03.01",
+    "price": "18,000원",
+    "category": "정기간행물"
   }
 ]

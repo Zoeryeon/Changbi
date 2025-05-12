@@ -28,7 +28,6 @@ export default function Header() {
         setVisible(true);
       }
 
-      console.log('현재', currentScrollY, '이전', prevScrollY);
       // 현재 스크롤 위치를 이전 위치로 업데이트
       prevScrollY = currentScrollY;
     }

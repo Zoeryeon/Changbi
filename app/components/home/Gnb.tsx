@@ -25,7 +25,7 @@ export default function Gnb({
     {
       title: '도서',
       subItems: [
-        { name: '창비의 책', link: '/bookList?page=1' },
+        { name: '창비의 책', link: '/bookList?page=${page}' },
         {
           name: '저자',
           link: '/authorList?regExp=%5E%5B%EA%B0%80-%EB%A7%87%5D',
