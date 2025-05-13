@@ -1,5 +1,6 @@
 //app /ui/home/Gnb.tsx
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Gnb({
   gnbActive,
@@ -10,6 +11,9 @@ export default function Gnb({
   onMouseEnter: () => void;
   onMouseLeave: () => void;
 }) {
+  // 현재 페이지 경로 가져오기
+  const pathname = usePathname();
+
   // 메뉴 데이터 배열
   const menuItems = [
     {
@@ -17,7 +21,7 @@ export default function Gnb({
       subItems: [
         { name: '회사 소개', link: '/about' },
         { name: '공동체', link: '/community' },
-        { name: '새소식', link: '/newsList?page1' },
+        { name: '새소식', link: '/newsList' },
         { name: '오시는 길', link: '/map' },
         { name: '채용', link: '/recruit' },
       ],
@@ -25,10 +29,10 @@ export default function Gnb({
     {
       title: '도서',
       subItems: [
-        { name: '창비의 책', link: '/bookList?page=${page}' },
+        { name: '창비의 책', link: '/bookList' },
         {
           name: '저자',
-          link: '/authorList?regExp=%5E%5B%EA%B0%80-%EB%A7%87%5D',
+          link: '/authorList',
         },
         { name: '자료실', link: '/library?category=102&page=1' },
       ],
@@ -81,7 +85,11 @@ export default function Gnb({
                 <li key={subIndex}>
                   <Link
                     href={subItem.link}
-                    className="whitespace-nowrap hover:underline"
+                    className={`whitespace-nowrap hover:underline relative ${
+                      pathname === subItem.link
+                        ? "after:content-[''] after:absolute after:-left-[12px] after:top-1/2 after:w-[4px] after:h-[4px] after:bg-gray-500 after:rounded-full after:transform after:-translate-y-1/2"
+                        : ''
+                    }`}
                   >
                     {subItem.name}
                   </Link>

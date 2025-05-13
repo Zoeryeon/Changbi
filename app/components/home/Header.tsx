@@ -50,13 +50,13 @@ export default function Header() {
 
   return (
     <header
-      className={`flex fixed px-[126px] max-2xl:px-[50px] w-full h-[80px] max-sm:h-[60px] border-b border-b-[#e6e6e6] max-sm:border-none items-center content-center bg-white justify-center z-999 transition-all duration-400 ${
+      className={`flex fixed px-[126px] max-md:px-[50px] max-sm:px-[28px] w-full h-[80px] max-sm:h-[60px] border-b border-b-[#e6e6e6] max-sm:border-none items-center content-center bg-white justify-center z-999 transition-all duration-400 ${
         menuOpen ? 'top-0' : visible ? 'top-0' : '-top-[80px]'
       }`}
     >
       <h1
         onClick={() => (window.location.href = '/')}
-        className="w-[200px absolute left-[126px] max-2xl:left-[50px] top-1/2 -translate-y-1/2"
+        className="w-[200px absolute left-[126px] max-[1400px]:left-[60px] max-md:left-[50px] max-sm:left-[28px] top-1/2 -translate-y-1/2 cursor-pointer"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -109,13 +109,13 @@ export default function Header() {
         onMouseLeave={() => setGnbActive(false)}
       />
       <Search />
-      <div className="hidden max-md:block absolute right-[50px] max-sm:right-[80px] top-1/2 -translate-y-1/2">
+      <div className="hidden max-md:block absolute right-[50px] max-sm:right-[55px] top-1/2 -translate-y-1/2">
         <button
           type="button"
           className="w-[30px] h-[60px] bg-[url('/images/mobilesearch.svg')] bg-[left_20px] bg-no-repeat"
         ></button>
       </div>
-      <div className="hidden max-sm:block absolute right-[50px] top-1/2 -translate-y-1/2">
+      <div className="hidden max-sm:block absolute right-[28px] top-1/2 -translate-y-1/2">
         <button
           type="button"
           className={`w-[30px] h-[60px] bg-no-repeat bg-[100%] scale-100 ${

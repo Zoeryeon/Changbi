@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Introduction() {
   return (
     <div className="relative pt-[100px] pb-[180px] max-md:py-[100px] max-md:block border-b border-[rgb(230,230,230)] max-sm:py-[70px]">
-      <div className="max-w-[1770px] mx-auto px-[60px] flex justify-between max-md:flex-col">
+      <div className="max-w-[1770px] mx-auto px-[60px] flex justify-between max-md:flex-col  max-sm:px-[28px]">
         <div className="shrink-0 max-md:relative max-md:w-auto max-md:block">
           <h2 className="text-[56px] font-medium leading-24 max-sm:text-[32px] max-sm:leading-[46px] max-sm:-tracking-widest">
             한결같되

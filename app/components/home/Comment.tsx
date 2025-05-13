@@ -29,8 +29,8 @@ export default function Comment() {
 
   return (
     <div className="py-[180px] relative max-md:py-[100px] max-md:relative max-md:block max-sm:py-[70px]">
-      <div className="max-w-[1770px] mx-auto px-[60px] flex justify-between max-md:flex-col">
-        <div className="shrink-0">
+      <div className="max-w-[1770px] mx-auto px-[60px] flex justify-between max-md:flex-col max-sm:px-[28px]">
+        <div className="shrink-0 mr-[100px]">
           <h2 className="font-medium text-[30px] leading-[56px] max-sm:text-[18px] max-sm:leading-[32px] max-sm:break-keep">
             창비주간논평
           </h2>

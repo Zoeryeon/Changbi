@@ -1,34 +1,30 @@
-// mocks/books-handlers.ts
+// mocks/news-handlers.ts
 import { http, HttpResponse } from 'msw';
-import books from './books.json';
+import news from './news.json';
 
-export const booksHandlers = [
-  http.get('http://localhost:9090/books', async () => {
+export const newsHandlers = [
+  http.get('http://localhost:9090/news', async () => {
     await sleep(200);
 
-    return HttpResponse.json(books);
+    return HttpResponse.json(news);
   }),
 
-  http.get('http://localhost:9090/bookList', async ({ request }) => {
+  http.get('http://localhost:9090/newsList', async ({ request }) => {
     await sleep(200);
 
     // request객체에는 searchParams가 없으므로 기본 js URL객체로 변환
     const url = new URL(request.url);
+    const keyword = url.searchParams.get('keyword');
     // parseInt는 문자열만 허용하므로 Number로 변경
     const page = Number(url.searchParams.get('page'));
-    const cate = url.searchParams.get('category');
 
     // 페이지별 데이터 가져오기
     function getDataByPage(
       data: {
         id: number;
-        title: string;
-        author: string;
-        image: string;
-        series: string;
-        date: string;
-        price: string;
         category: string;
+        title: string;
+        date: string;
       }[],
       page: number,
       limit: number
@@ -51,15 +47,17 @@ export const booksHandlers = [
       };
     }
 
-    // cate가 각 category인 경우 모두 보냄
-    if (cate) {
-      const filtered = books.filter((book) => book.category === cate);
-      const result = getDataByPage(filtered, page, 7);
+    // 검색어에 대한 데이터 필터링하여 보냄
+    if (keyword !== 'undefined' && keyword) {
+      const filterd = news.filter((item) => {
+        return item.title.includes(keyword);
+      });
+      const result = getDataByPage(filterd, page, 5);
       return HttpResponse.json(result);
     }
 
-    // cate가 null인 경우 모두 보냄
-    const result = getDataByPage(books, page, 7);
+    // 검색어 없는 경우 모두 보냄
+    const result = getDataByPage(news, page, 5);
     return HttpResponse.json(result);
   }),
 ];

@@ -5,11 +5,11 @@ export default function Community() {
   return (
     <div className="text-[14px] leading-[28px] text-gray-500">
       커뮤니티
-      <div className="flex flex-wrap max-w-[666px] max-2xl:max-w-[540px] max-md:max-w-[560px] max-md:w-full">
+      <div className="flex flex-wrap max-w-[666px] max-2xl:max-w-[540px] max-md:max-w-[560px] max-md:w-full max-sm:block">
         <Link
           href="https://class.changbiedu.com/"
           target="_blank"
-          className="flex w-[50%] h-[84px] items-center gap-x-[10px]"
+          className="flex w-[50%] h-[84px] items-center gap-x-[10px] max-sm:w-full"
         >
           <img
             src="/images/changbi_edu.png"
@@ -25,7 +25,7 @@ export default function Community() {
         <Link
           href="https://club.changbi.com/"
           target="_blank"
-          className="flex w-[50%] h-[84px] items-center gap-x-[10px]"
+          className="flex w-[50%] h-[84px] items-center gap-x-[10px] max-sm:w-full"
         >
           <img
             src="/images/클럽창비.svg"
@@ -41,7 +41,7 @@ export default function Community() {
         <Link
           href="https://www.instagram.com/changbibusan/"
           target="_blank"
-          className="flex w-[50%] h-[84px] items-center gap-x-[10px]"
+          className="flex w-[50%] h-[84px] items-center gap-x-[10px] max-sm:w-full"
         >
           <img
             src="/images/changbibusan.svg"
@@ -57,7 +57,7 @@ export default function Community() {
         <Link
           href="https://www.instagram.com/cafe_changbi/"
           target="_blank"
-          className="flex w-[50%] h-[84px] items-center gap-x-[10px]"
+          className="flex w-[50%] h-[84px] items-center gap-x-[10px] max-sm:w-full"
         >
           <img
             src="/images/cafechangbi.svg"
@@ -71,7 +71,7 @@ export default function Community() {
           </span>
         </Link>
       </div>
-      <hr className="h-[1px] bg-[#ddd] border-none" />
+      <hr className="h-[1px] bg-[#ddd] border-none max-sm:h-0" />
     </div>
   );
 }

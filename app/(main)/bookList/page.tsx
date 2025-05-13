@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { useQuery } from '@tanstack/react-query';
-import { use, useEffect, useRef, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Pagination from '@/app/components/Pagination';
 
@@ -18,41 +18,73 @@ type BookList = {
   category: string;
 };
 
-export default function BookList() {
+const cateList = [
+  '전체',
+  '문학',
+  '인문교양',
+  '어린이',
+  '청소년',
+  '그림책',
+  '만화',
+  '교사 및 부모',
+  '정기간행물',
+  '토닥스토리',
+];
+
+export default function BookList({
+  searchParams,
+}: {
+  searchParams: Promise<{ category: string; page: string }>;
+}) {
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
+  const [cate, setCate] = useState('');
+
+  const paramsObj = use(searchParams);
+  const [params] = useState(new URLSearchParams(paramsObj));
   const router = useRouter();
 
   const { isPending, data, isError, error } = useQuery<{
     result: BookList[];
     total: number;
   }>({
-    queryKey: ['bookList', page],
+    queryKey: ['bookList', page, cate],
     queryFn: () => {
-      return fetch(`http://localhost:9090/bookList?page=${page}`).then((res) =>
-        res.json()
-      );
+      return fetch(
+        `http://localhost:9090/bookList?page=${page}&category=${cate}`
+      ).then((res) => res.json());
     },
   });
-  console.log(data);
 
   // data 변경시 totalPage 계산
   useEffect(() => {
     if (data) {
-      setTotalPage(Math.ceil(data?.total / 5) || 0);
+      setTotalPage(Math.ceil(data?.total / 7) || 0);
     }
   }, [data]);
 
   // 페이지 변경시 쿼리 파라미터 추가
   useEffect(() => {
-    router.push(`?page=${page}`);
+    params.set('page', page.toString());
+    router.push(`?${params.toString()}`);
   }, [page]);
+
+  function handleCate(e: React.MouseEvent<HTMLButtonElement>) {
+    if ((e.target as HTMLButtonElement).innerText !== '전체') {
+      params.set('category', (e.target as HTMLButtonElement).innerText);
+    } else {
+      params.delete('category');
+    }
+    router.push(`?${params.toString()}`);
+    setCate((e.target as HTMLButtonElement).innerText);
+    setPage(1);
+  }
 
   return (
     <main className="h-auto mt-[20px] pt-[148px] pb-[150px]">
-      <div className="max-w-[1770px] mx-auto px-[60px]">
+      <div className="max-w-[1770px] mx-auto px-[60px] max-sm:px-[28px]">
         <div className="flex items-baseline justify-between flex-wrap">
-          <h2 className="text-[56px] font-bold tracking-tight leading-[88px]">
+          <h2 className="text-[56px] font-bold tracking-tight leading-[88px] max-sm:text-[32px] max-sm:leading-[46px] max-sm:break-keep">
             창비의 책
           </h2>
           <span className="inline-block text-[14px] leading-[28px]">
@@ -61,71 +93,25 @@ export default function BookList() {
         </div>
         <div className="relative">
           <div className="flex flex-wrap gap-x-[12px] gap-y-[6px] mt-[24px] top-0 left-0 max-sm:gap-x-[10px]">
-            <Link
-              href="/bookList"
-              className="bg-[#2c3338] text-white w-auto px-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px]"
-            >
-              전체
-            </Link>
-            <Link
-              href="/bookList?category=문학"
-              className="bg-[#f2f3f4] text-gray-500 w-auto pr-[25px] pl-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px]"
-            >
-              문학
-            </Link>
-            <Link
-              href="/bookList?category=인문교양"
-              className="bg-[#f2f3f4] text-gray-500 w-auto pr-[25px] pl-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px]"
-            >
-              인문교양
-            </Link>
-            <Link
-              href="/bookList?category=어린이"
-              className="bg-[#f2f3f4] text-gray-500 w-auto pr-[25px] pl-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px]"
-            >
-              어린이
-            </Link>
-            <Link
-              href="/bookList?category=청소년"
-              className="bg-[#f2f3f4] text-gray-500 w-auto pr-[25px] pl-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px]"
-            >
-              청소년
-            </Link>
-            <Link
-              href="/bookList?category=그림책"
-              className="bg-[#f2f3f4] text-gray-500 w-auto pr-[25px] pl-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px]"
-            >
-              그림책
-            </Link>
-            <Link
-              href="/bookList?category=만화"
-              className="bg-[#f2f3f4] text-gray-500 w-auto pr-[25px] pl-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px]"
-            >
-              만화
-            </Link>
-            <Link
-              href="/bookList?category=교사 및 부모"
-              className="bg-[#f2f3f4] text-gray-500 w-auto pr-[25px] pl-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px]"
-            >
-              교사 및 부모
-            </Link>
-            <Link
-              href="/bookList?category=정기간행물"
-              className="bg-[#f2f3f4] text-gray-500 w-auto pr-[25px] pl-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px]"
-            >
-              정기간행물
-            </Link>
-            <Link
-              href="/bookList?category=토닥스토리"
-              className="bg-[#f2f3f4] text-gray-500 w-auto pr-[25px] pl-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px]"
-            >
-              토닥스토리
-            </Link>
+            {cateList.map((item) => (
+              <button
+                key={item}
+                type="button"
+                className={`w-auto px-[25px] block h-[42px] leading-[42px] rounded-[10px] shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px] ${
+                  (cate === '' ? '전체' : cate) === item
+                    ? 'bg-[#2c3338] text-white'
+                    : 'bg-[#f2f3f4] text-gray-500'
+                }`}
+                onClick={handleCate}
+              >
+                {item}
+              </button>
+            ))}
           </div>
           {isPending && <p>Loading...</p>}
           {isError && <p>{error.message}</p>}
           {data && data?.result?.length > 0 && (
-            <ul className="pt-[102px] items-baseline grid grid-cols-5 gap-y-[70px] gap-x-[20px] max-md:grid-cols-3 max-sm:grid-cols-2">
+            <ul className="pt-[102px] items-baseline grid grid-cols-5 gap-y-[70px] gap-x-[20px] max-md:grid-cols-3 max-sm:grid-cols-2 max-sm:pt-[40px]">
               {data.result.map(
                 (book: {
                   id: number;

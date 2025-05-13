@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Subscribe() {
   return (
     <div className="py-[180px] relative max-md:py-[100px] max-md:relative max-md:block border-b border-[#e6e6e6] max-sm:py-[70px]">
-      <div className="max-w-[1770px] mx-auto px-[60px] flex justify-between max-md:flex-col">
+      <div className="max-w-[1770px] mx-auto px-[60px] flex justify-between max-md:flex-col max-sm:px-[28px]">
         <div className="shrink-0">
           <h2 className="font-medium text-[30px] leading-[56px] max-sm:text-[18px] max-sm:leading-[32px] max-sm:break-keep">
             계간 창작과비평

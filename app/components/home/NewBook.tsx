@@ -35,13 +35,13 @@ export default function NewBook() {
 
   return (
     <div className="py-[180px] relative max-md:py-[100px] max-md:relative max-md:block border-b border-[#e6e6e6] max-sm:py-[70px]">
-      <div className="max-w-[1770px] mx-auto px-[60px] flex justify-between max-md:flex-col">
-        <div className="shrink-0">
+      <div className="max-w-[1770px] mx-auto px-[60px] flex justify-between max-md:flex-col max-sm:px-[28px]">
+        <div className="shrink-0 mr-[100px]">
           <h2 className="font-medium text-[30px] leading-[56px] max-sm:text-[18px] max-sm:leading-[32px] max-sm:break-keep">
             신간 도서
           </h2>
           <Link
-            href="/BookList?page=1"
+            href="/bookList"
             className="inline-flex pr-[40px] leading-[36px] font-medium text-[14px] items-center hover:underline group max-sm:font-normal"
           >
             더보기
