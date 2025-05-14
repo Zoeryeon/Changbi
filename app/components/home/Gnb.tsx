@@ -21,7 +21,7 @@ export default function Gnb({
       subItems: [
         { name: '회사 소개', link: '/about' },
         { name: '공동체', link: '/community' },
-        { name: '새소식', link: '/newsList' },
+        { name: '새소식', link: '/news-list' },
         { name: '오시는 길', link: '/map' },
         { name: '채용', link: '/recruit' },
       ],
@@ -29,12 +29,12 @@ export default function Gnb({
     {
       title: '도서',
       subItems: [
-        { name: '창비의 책', link: '/bookList' },
+        { name: '창비의 책', link: '/book-list' },
         {
           name: '저자',
-          link: '/authorList',
+          link: '/author-list',
         },
-        { name: '자료실', link: '/library?category=102&page=1' },
+        { name: '자료실', link: '/library' },
       ],
     },
     {
@@ -47,14 +47,14 @@ export default function Gnb({
     {
       title: '문학상/투고',
       subItems: [
-        { name: '문학상/공모', link: '/contest?type=1' },
-        { name: '단행본 투고', link: '/contribute?type=1' },
+        { name: '문학상/공모', link: '/contest' },
+        { name: '단행본 투고', link: '/contribute' },
       ],
     },
     {
       title: '문의',
       subItems: [
-        { name: '1:1 문의', link: '/cs?type=ask' },
+        { name: '1:1 문의', link: '/cs' },
         { name: '2차 저작권 안내', link: '/copyright' },
       ],
     },

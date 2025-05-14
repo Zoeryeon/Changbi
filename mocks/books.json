@@ -393,7 +393,7 @@
   {
     "id": 40,
     "title": "시로 채우는 내 마음 필사노트",
-    "author": "황인찬 회",
+    "author": "황인찬 외",
     "image": "/images/books/250117_7085b74e-c51e-4663-bbb1-b1be0db6d187.jpg",
     "series": "마음을 표현하고 싶지만 한 단어도 쓰기 힘든 당신을 위한 문장들",
     "date": "2025.01.24",
@@ -403,7 +403,7 @@
   {
     "id": 41,
     "title": "위풍당당 여우 꼬리 6",
-    "author": "황인찬 회",
+    "author": "손원평, 만물상",
     "image": "/images/books/250117_d84bd051-14f2-4a60-9ef1-668f769b7be3.jpg",
     "series": "위풍당당 여우 꼬리",
     "date": "2025.01.17",
@@ -999,5 +999,215 @@
     "date": "2024.03.01",
     "price": "18,000원",
     "category": "정기간행물"
+  },
+  {
+    "id": 101,
+    "title": "두고 온 여름",
+    "author": "성해나",
+    "image": "/images/books/230314_527060d2-0451-4d61-9401-e0b37350276b.jpg",
+    "series": "소설Q",
+    "date": "2024.02.28",
+    "price": "14,000원",
+    "category": "문학"
+  },
+  {
+    "id": 102,
+    "title": "당근 할머니",
+    "author": "안녕달",
+    "image": "/images/books/240423_5b6632c9-0ded-42e6-8a56-bc77d6383e51.jpg",
+    "series": "",
+    "date": "2024.02.23",
+    "price": "14,000원",
+    "category": "그림책"
+  },
+  {
+    "id": 103,
+    "title": "겨울 이불",
+    "author": "안녕달",
+    "image": "/images/books/230130_b516ff17-0040-48cb-8447-230693b34d9b.jpg",
+    "series": "",
+    "date": "2024.02.19",
+    "price": "16,000원",
+    "category": "그림책"
+  },
+  {
+    "id": 104,
+    "title": "당근 유치원",
+    "author": "안녕달",
+    "image": "/images/books/20200528_020936_thumb.jpg",
+    "series": "",
+    "date": "2024.02.10",
+    "price": "14,000원",
+    "category": "그림책"
+  },
+  {
+    "id": 105,
+    "title": "안녕",
+    "author": "안녕달",
+    "image": "/images/books/20180723_062306_thumb.jpg",
+    "series": "",
+    "date": "2024.02.02",
+    "price": "23,000원",
+    "category": "그림책"
+  },
+  {
+    "id": 106,
+    "title": "엄마 어디 있지?",
+    "author": "박성우, 밤코",
+    "image": "/images/books/221004_11346657-4ce5-49e1-a5a2-096c13c86dbe.jpg",
+    "series": "",
+    "date": "2024.01.30",
+    "price": "15,000원",
+    "category": "그림책"
+  },
+  {
+    "id": 107,
+    "title": "버샤",
+    "author": "표명희",
+    "image": "/images/books/230224_064d4587-9ec1-407f-b310-39dd46179a31.jpg",
+    "series": "창비청소년문학 117",
+    "date": "2024.01.24",
+    "price": "14,000원",
+    "category": "청소년"
+  },
+  {
+    "id": 108,
+    "title": "언니에게 보내는 행운의 편지",
+    "author": "정세랑",
+    "image": "/images/books/20210912_070544_thumb.jpg",
+    "series": "",
+    "date": "2024.01.17",
+    "price": "15,000원",
+    "category": "인문교양"
+  },
+  {
+    "id": 109,
+    "title": "왕창 세일! 엄마 아빠 팔아요",
+    "author": "이용포, 노인경",
+    "image": "/images/books/3253.jpg",
+    "series": "신나는 책읽기 29",
+    "date": "2024.01.10",
+    "price": "11,000원",
+    "category": "어린이"
+  },
+  {
+    "id": 110,
+    "title": "팥빙수 눈사람 펑펑 1",
+    "author": "나은, 보람",
+    "image": "/images/books/241101_95df09bb-dedf-4723-870c-2591470d4485.jpg",
+    "series": "팥빙수 눈사람 펑펑",
+    "date": "2024.01.01",
+    "price": "14,000원",
+    "category": "어린이"
+  },
+  {
+    "id": 111,
+    "title": "꽃 밟을 일을 근심하다",
+    "author": "나은, 보람",
+    "image": "/images/books/20171204_072603_thumb.jpg",
+    "series": "창비시선 417",
+    "date": "2023.12.28",
+    "price": "13,000원",
+    "category": "문학"
+  },
+  {
+    "id": 112,
+    "title": "아몬드 (100만 부 기념 특별판)",
+    "author": "손원평",
+    "image": "/images/books/20171204_072603_thumb.jpg",
+    "series": "",
+    "date": "2023.12.23",
+    "price": "12,000원",
+    "category": "문학"
+  },
+  {
+    "id": 113,
+    "title": "동시 유령의 비밀 수업",
+    "author": "김제곤, 이주희",
+    "image": "/images/books/231102_5121f25d-ad9a-4f66-a3b4-4b276231e1a5.jpg",
+    "series": "동시집",
+    "date": "2023.12.18",
+    "price": "12,000원",
+    "category": "어린이"
+  },
+  {
+    "id": 114,
+    "title": "돈 끼호떼 1",
+    "author": "미겔 데 세르반떼스, 민용태",
+    "image": "/images/books/3474.jpg",
+    "series": "창비세계문학 3",
+    "date": "2023.12.10",
+    "price": "17,000원",
+    "category": "문학"
+  },
+  {
+    "id": 115,
+    "title": "돈 끼호떼 2",
+    "author": "미겔 데 세르반떼스, 민용태",
+    "image": "/images/books/3473.jpg",
+    "series": "창비세계문학 4",
+    "date": "2023.12.06",
+    "price": "17,000원",
+    "category": "문학"
+  },
+  {
+    "id": 116,
+    "title": "코코에게",
+    "author": "최현우, 이윤희",
+    "image": "/images/books/230811_056e5876-1850-481d-b870-5356dcd2f6a7.jpg",
+    "series": "",
+    "date": "2023.11.29",
+    "price": "17,000원",
+    "category": "그림책"
+  },
+  {
+    "id": 117,
+    "title": "젤트빌라 사람들",
+    "author": "고트프리트 켈러, 권선형",
+    "image": "/images/books/029_젤트빌라-e1393290574294_thumb.jpg",
+    "series": "창비세계문학 29",
+    "date": "2023.11.15",
+    "price": "12,000원",
+    "category": "문학"
+  },
+  {
+    "id": 118,
+    "title": "마츠가 돌아오지 않던 밤",
+    "author": "마르타 헤센, 김영진",
+    "image": "/images/books/2849_thumb.jpg",
+    "series": "창비청소년문학 7",
+    "date": "2023.11.05",
+    "price": "12,000원",
+    "category": "청소년"
+  },
+  {
+    "id": 119,
+    "title": "모래 사나이",
+    "author": "E. T. A. 호프만, 황종민",
+    "image": "/images/books/20171110_062928_thumb.jpg",
+    "series": "창비세계문학 62",
+    "date": "2023.10.30",
+    "price": "14,000원",
+    "category": "문학"
+  },
+  {
+    "id": 120,
+    "title": "토성의 고리(개정판)",
+    "author": "W. G. 제발트, 이재영",
+    "image": "/images/books/20190327_052931_thumb.jpg",
+    "series": "",
+    "date": "2023.10.22",
+    "price": "16,000원",
+    "category": "문학"
+  },
+  {
+    "id": 121,
+    "title": "패니와 애니",
+    "author": "D.H. 로런스, 백낙청, 황정아",
+    "image": "/images/books/3511_thumb.jpg",
+    "series": "창비세계문학 12",
+    "date": "2023.10.15",
+    "price": "13,000원",
+    "category": "문학"
   }
 ]

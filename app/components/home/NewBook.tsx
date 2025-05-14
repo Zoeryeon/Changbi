@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 export default function NewBook() {
   const { isPending, data, isError, error } = useQuery({
-    queryKey: ['bookList'],
+    queryKey: ['book-list'],
     queryFn: () => {
       return fetch('http://localhost:9090/books').then((res) => res.json());
     },
@@ -41,7 +41,7 @@ export default function NewBook() {
             신간 도서
           </h2>
           <Link
-            href="/bookList"
+            href="/book-list"
             className="inline-flex pr-[40px] leading-[36px] font-medium text-[14px] items-center hover:underline group max-sm:font-normal"
           >
             더보기

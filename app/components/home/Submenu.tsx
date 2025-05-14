@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Submenu({ menuOpen }: { menuOpen: boolean }) {
-  console.log(menuOpen);
   // 각 메뉴 카테고리의 열림/닫힘 상태를 관리하는 state
   // -1은 모든 메뉴가 닫힌 상태를 의미
   const [openMenuIndex, setOpenMenuIndex] = useState(-1);

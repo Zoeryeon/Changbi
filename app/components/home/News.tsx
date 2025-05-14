@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function News() {
   const { isPending, data, isError, error } = useQuery({
-    queryKey: ['newsList'],
+    queryKey: ['news-list'],
     queryFn: () => {
       return fetch('http://localhost:9090/news').then((res) => res.json());
     },
@@ -23,7 +23,7 @@ export default function News() {
             창비 새소식
           </h2>
           <Link
-            href="/newsList"
+            href="/news-list"
             className="inline-flex pr-[40px] leading-[36px] font-medium text-[14px] items-center hover:underline group max-sm:font-normal"
           >
             더보기

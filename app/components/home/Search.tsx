@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Search() {
   return (
     <div>
-      <div className="absolute right-[126px] max-[1400px]:right-[60px] top-1/2 -translate-y-1/2 max-md:hidden">
+      <div className="absolute right-[60px] max-[1400px] top-1/2 -translate-y-1/2 max-md:hidden">
         <div className="flex gap-x-[20px]">
           <Link
             href="http://en.changbi.com"

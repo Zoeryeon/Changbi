@@ -9,7 +9,7 @@ export const booksHandlers = [
     return HttpResponse.json(books);
   }),
 
-  http.get('http://localhost:9090/bookList', async ({ request }) => {
+  http.get('http://localhost:9090/book-list', async ({ request }) => {
     await sleep(200);
 
     // request객체에는 searchParams가 없으므로 기본 js URL객체로 변환
