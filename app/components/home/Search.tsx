@@ -1,7 +1,12 @@
 //app /components /home /Search.tsx
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
-export default function Search() {
+type SearchProps = {
+  toSearchResult: () => void;
+};
+
+export default function Search({ toSearchResult }: SearchProps) {
   return (
     <div>
       <div className="absolute right-[60px] max-[1400px] top-1/2 -translate-y-1/2 max-md:hidden">
@@ -63,7 +68,7 @@ export default function Search() {
             <button
               type="submit"
               className="w-[54px] h-[30px] right-0 top-0 absolute bg-point1 rounded-tr-[10px] rounded-br-[10px] place-items-center hover:bg-[#e7e7e8]"
-              onClick={() => (window.location.href = '/search-result')}
+              onClick={toSearchResult}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

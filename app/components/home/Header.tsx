@@ -5,6 +5,7 @@ import Gnb from '@/app/components/home/Gnb';
 import Search from '@/app/components/home/Search';
 import SubMenu from '@/app/components/home/SubMenu';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
   const [gnbActive, setGnbActive] = useState(false);
@@ -12,6 +13,11 @@ export default function Header() {
   // const prevScrollY = useRef(0); // 이전 스크롤 위치를 저장할 ref
   // 모바일 메뉴 열기
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+
+  const toSearchResult = () => {
+    router.push('/search-result');
+  };
 
   // 스크롤 이벤트 처리
   useEffect(() => {
@@ -109,12 +115,12 @@ export default function Header() {
           onMouseEnter={() => setGnbActive(true)}
           onMouseLeave={() => setGnbActive(false)}
         />
-        <Search />
+        <Search toSearchResult={toSearchResult} />
         <div className="hidden max-md:block absolute right-[50px] max-sm:right-[55px] top-1/2 -translate-y-1/2">
           <button
             type="button"
             className="w-[30px] h-[60px] bg-[url('/images/mobilesearch.svg')] bg-[left_20px] bg-no-repeat"
-            onClick={() => (window.location.href = '/search-result')}
+            onClick={toSearchResult}
           ></button>
         </div>
         <div className="hidden max-sm:block absolute right-[28px] top-1/2 -translate-y-1/2">
@@ -128,7 +134,6 @@ export default function Header() {
             onClick={() => setMenuOpen(!menuOpen)}
           ></button>
         </div>
-        <Search />
         <SubMenu menuOpen={menuOpen} />
       </div>
     </header>
