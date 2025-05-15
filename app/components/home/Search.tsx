@@ -54,45 +54,48 @@ export default function Search() {
           </Link>
         </div>
         <div className="relative w-[200px] mt-[5px]">
-          <input
-            type="search"
-            className="w-[200px] h-[30px] bg-point1 rounded-[10px] px-[16px] border-0 text-[14px] leading-[28px] hover:bg-[#e7e7e8]"
-            autoComplete="off"
-          />
-          <button
-            type="button"
-            className="w-[54px] h-[30px] right-0 top-0 absolute bg-point1 rounded-tr-[10px] rounded-br-[10px] place-items-center hover:bg-[#e7e7e8]"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              id="그룹_44"
-              data-name="그룹 44"
-              width="16.434"
-              height="16.434"
-              viewBox="0 0 16.434 16.434"
+          <form>
+            <input
+              type="search"
+              className="w-[200px] h-[30px] bg-point1 rounded-[10px] px-[16px] border-0 text-[14px] leading-[28px] hover:bg-[#e7e7e8]"
+              autoComplete="off"
+            />
+            <button
+              type="submit"
+              className="w-[54px] h-[30px] right-0 top-0 absolute bg-point1 rounded-tr-[10px] rounded-br-[10px] place-items-center hover:bg-[#e7e7e8]"
+              onClick={() => (window.location.href = '/search-result')}
             >
-              <g
-                id="타원_14"
-                data-name="타원 14"
-                fill="none"
-                stroke="#333"
-                strokeWidth="1"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="그룹_44"
+                data-name="그룹 44"
+                width="16.434"
+                height="16.434"
+                viewBox="0 0 16.434 16.434"
               >
-                <circle cx="7" cy="7" r="7" stroke="none" />
-                <circle cx="7" cy="7" r="6.5" fill="none" />
-              </g>
-              <line
-                id="선_44"
-                data-name="선 44"
-                x1="4.487"
-                y1="4.487"
-                transform="translate(11.593 11.593)"
-                fill="none"
-                stroke="#333"
-                strokeWidth="1"
-              />
-            </svg>
-          </button>
+                <g
+                  id="타원_14"
+                  data-name="타원 14"
+                  fill="none"
+                  stroke="#333"
+                  strokeWidth="1"
+                >
+                  <circle cx="7" cy="7" r="7" stroke="none" />
+                  <circle cx="7" cy="7" r="6.5" fill="none" />
+                </g>
+                <line
+                  id="선_44"
+                  data-name="선 44"
+                  x1="4.487"
+                  y1="4.487"
+                  transform="translate(11.593 11.593)"
+                  fill="none"
+                  stroke="#333"
+                  strokeWidth="1"
+                />
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </div>

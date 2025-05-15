@@ -114,6 +114,7 @@ export default function Header() {
           <button
             type="button"
             className="w-[30px] h-[60px] bg-[url('/images/mobilesearch.svg')] bg-[left_20px] bg-no-repeat"
+            onClick={() => (window.location.href = '/search-result')}
           ></button>
         </div>
         <div className="hidden max-sm:block absolute right-[28px] top-1/2 -translate-y-1/2">

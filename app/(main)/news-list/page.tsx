@@ -66,7 +66,6 @@ export default function NewsList({
 
     // 검색 실행 후 입력값 커서 초기화
     if (inputRef.current) {
-      inputRef.current.value = '';
       inputRef.current.blur();
     }
   }
@@ -98,7 +97,7 @@ export default function NewsList({
                 defaultValue={paramsObj.keyword}
               />
               <button
-                type="button"
+                type="submit"
                 className="absolute w-[62px] h-[62px] bg-[url('/images/searchinputicon.svg')] bg-no-repeat bg-center right-0 top-0 hover:bg-[#f6f6f6] max-sm:bg-[url('/images/headersearchicon.svg')] max-sm:h-[40px] max-sm:w-[54px]"
               ></button>
             </form>

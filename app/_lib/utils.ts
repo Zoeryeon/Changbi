@@ -9,13 +9,13 @@ export function formatDate(date: Date): string {
 }
 
 export function generatePagination(currentPage: number, totalPages: number) {
-  // 3페이지 이하일 때는 모든 페이지를 보여준다.
-  if (totalPages <= 3) {
+  // 4페이지 이하일 때는 모든 페이지를 보여준다.
+  if (totalPages <= 4) {
     return Array.from({ length: totalPages }, (_, i) => i + 1);
   }
 
   // 5페이지 초과일 때는 현재 페이지를 기준으로 앞뒤로 2페이지씩 보여준다.
-  if (currentPage <= 5) {
+  if (currentPage <= 4) {
     return [1, 2, 3, 4, 5, totalPages];
   }
 

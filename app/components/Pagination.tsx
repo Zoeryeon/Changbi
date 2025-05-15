@@ -20,7 +20,7 @@ export default function Pagination({
 
   return (
     <div className="flex gap-x-[5px] max-sm:justify-center">
-      {totalPage < 4
+      {totalPage < 5
         ? pageArr.map((item, i) => (
             <button
               type="button"
@@ -37,7 +37,7 @@ export default function Pagination({
           ))
         : pageArr.map((item, i) => {
             // page가 4이상일때 index가 1인 자리에 화살표 넣기
-            if (i === 1 && page >= 4) {
+            if (i === 1 && page >= 5) {
               return (
                 <button
                   key={i}
@@ -59,7 +59,7 @@ export default function Pagination({
                 ></button>
               );
               // page가 4이상이고 page가 totalPage에서 3뺀 것보다 작을때 index가 5인 자리에 화살표 넣기
-            } else if (i === 5 && page >= 4 && page < totalPage - 3) {
+            } else if (i === 5 && page >= 5 && page < totalPage - 3) {
               return (
                 <button
                   key={i}
@@ -70,7 +70,7 @@ export default function Pagination({
                 ></button>
               );
               // page가 4이하일때 index가 4인 자리에 화살표 넣기
-            } else if (i === 4 && page < 4) {
+            } else if (i === 4 && page < 5) {
               return (
                 <button
                   key={i}

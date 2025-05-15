@@ -36,12 +36,15 @@ export default function BookList({
 }: {
   searchParams: Promise<{ category: string; page: string }>;
 }) {
-  const [page, setPage] = useState(1);
-  const [totalPage, setTotalPage] = useState(0);
-  const [cate, setCate] = useState('');
-
   const paramsObj = use(searchParams);
   const [params] = useState(new URLSearchParams(paramsObj));
+
+  const initialCategory = params.get('category') || '';
+
+  const [page, setPage] = useState(1);
+  const [totalPage, setTotalPage] = useState(0);
+  const [cate, setCate] = useState(initialCategory);
+
   const router = useRouter();
 
   const { isPending, data, isError, error } = useQuery<{
@@ -72,11 +75,12 @@ export default function BookList({
   function handleCate(e: React.MouseEvent<HTMLButtonElement>) {
     if ((e.target as HTMLButtonElement).innerText !== '전체') {
       params.set('category', (e.target as HTMLButtonElement).innerText);
+      setCate((e.target as HTMLButtonElement).innerText);
     } else {
       params.delete('category');
+      setCate('');
     }
     router.push(`?${params.toString()}`);
-    setCate((e.target as HTMLButtonElement).innerText);
     setPage(1);
   }
 
@@ -131,7 +135,7 @@ export default function BookList({
                       <div className="relative overflow-hidden border border-[#e6e6e6]">
                         <img
                           src={book.image}
-                          alt="신간"
+                          alt="책"
                           className="w-full h-auto align-baseline -mb-[5px]"
                         />
                         <div className="absolute bottom-0 p-[16px] bg-[#00001480] leading-[28px] w-full flex flex-col backdrop-blur-sm text-[#eee] text-[14px] transition-transform duration-300 translate-y-[100%] group-hover:translate-y-0 max-sm:leading-[26px]">
