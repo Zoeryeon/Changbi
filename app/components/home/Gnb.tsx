@@ -66,7 +66,7 @@ export default function Gnb({
       onMouseLeave={onMouseLeave}
     >
       <ul
-        className="flex h-[60px] gap-x-[100px] max-md:gap-x-[65px] max-sm:hidden items-center justify-between"
+        className="flex h-[60px] gap-x-[100px] max-[1300px]:gap-x-[80px] max-md:gap-x-[65px] max-sm:hidden items-center justify-between"
         onMouseEnter={onMouseEnter}
       >
         {menuItems.map((menuItem, index) => (

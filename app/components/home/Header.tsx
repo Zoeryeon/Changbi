@@ -5,19 +5,13 @@ import Gnb from '@/app/components/home/Gnb';
 import Search from '@/app/components/home/Search';
 import SubMenu from '@/app/components/home/SubMenu';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Header() {
   const [gnbActive, setGnbActive] = useState(false);
   const [visible, setVisible] = useState(true);
-  // const prevScrollY = useRef(0); // 이전 스크롤 위치를 저장할 ref
   // 모바일 메뉴 열기
   const [menuOpen, setMenuOpen] = useState(false);
-  const router = useRouter();
-
-  const toSearchResult = () => {
-    router.push('/search-result');
-  };
 
   // 스크롤 이벤트 처리
   useEffect(() => {
@@ -115,13 +109,14 @@ export default function Header() {
           onMouseEnter={() => setGnbActive(true)}
           onMouseLeave={() => setGnbActive(false)}
         />
-        <Search toSearchResult={toSearchResult} />
-        <div className="hidden max-md:block absolute right-[50px] max-sm:right-[55px] top-1/2 -translate-y-1/2">
-          <button
-            type="button"
-            className="w-[30px] h-[60px] bg-[url('/images/mobilesearch.svg')] bg-[left_20px] bg-no-repeat"
-            onClick={toSearchResult}
-          ></button>
+        <Search />
+        <div className="hidden max-md:block absolute right-[50px] max-sm:right-[60px] top-1/2 -translate-y-1/2">
+          <Link
+            href="/search-result?page=1&searchCategory=books&keyword="
+            className="w-[30px] h-[60px]"
+          >
+            <img src="/images/mobilesearch.svg" alt="검색" />
+          </Link>
         </div>
         <div className="hidden max-sm:block absolute right-[28px] top-1/2 -translate-y-1/2">
           <button

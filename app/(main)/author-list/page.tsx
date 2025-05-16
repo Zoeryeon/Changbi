@@ -42,8 +42,6 @@ export default function AuthorList({
   function handleTag(index: number) {
     setTag((index + 1).toString()); // tag 값 업데이트
     params.set('tag', (index + 1).toString());
-    // 검색어 초기화
-    params.delete('keyword');
     router.push(`?${params.toString()}`);
   }
 
@@ -107,8 +105,27 @@ export default function AuthorList({
                 className="absolute w-[62px] h-[62px] bg-[url('/images/searchinputicon.svg')] bg-no-repeat bg-center right-0 top-0 hover:bg-[#f6f6f6] max-sm:bg-[url('/images/headersearchicon.svg')] max-sm:h-[40px] max-sm:w-[54px]"
               ></button>
             </form>
-            {isPending && <p>Loading...</p>}
+            {isPending && (
+              <div className="w-full h-[300px] flex justify-center items-center flex-col text-center">
+                <h1 className="text-[20px] leading-[34px] font-medium max-sm:text-[16px] max-sm:leading-[26px]">
+                  검색 결과를 불러오고 있습니다.
+                </h1>
+                <h4 className="text-[14px] leading-[28px] max-sm:leading-[26px]">
+                  잠시만 기다려주세요
+                </h4>
+              </div>
+            )}
             {isError && <p>{error.message}</p>}
+            {data?.length === 0 && (
+              <div className="w-full h-[300px] flex justify-center items-center flex-col text-center">
+                <h1 className="text-[20px] leading-[34px] font-medium max-sm:text-[16px] max-sm:leading-[26px]">
+                  검색 결과가 없습니다.
+                </h1>
+                <h4 className="text-[14px] leading-[28px] max-sm:leading-[26px]">
+                  다른 카테고리의 검색 결과도 확인해 보세요.
+                </h4>
+              </div>
+            )}
             <ul className="flex flex-wrap gap-y-[53px] gap-x-[90px] justify-between mt-[60px] pl-[1px] max-[1500px]:block max-sm:mt-[21px]">
               {data?.map(
                 (
@@ -118,7 +135,7 @@ export default function AuthorList({
                   <li key={author.id} className="relative">
                     <Link
                       href="/authorDetail"
-                      className="w-[260px] flex flex-nowrap max-[1500px]:w-full max-[1500px]:mb-[20px]"
+                      className="w-[260px] flex flex-nowrap max-[1500px]:w-full max-[1500px]:mb-[20px] hover:underline"
                     >
                       <div className="w-[70px] h-[70px] rounded-[8px] overflow-hidden max-sm:w-[50px] max-sm:h-[50px]">
                         <img

@@ -203,7 +203,7 @@
   {
     "id": 21,
     "title": "창비어린이 88호(2025년 봄호)",
-    "author": "",
+    "author": "창비어린이",
     "image": "/images/books/250227_5ffd672d-e4f1-4f1e-a96d-b6ba2a437fa4.jpg",
     "series": "",
     "date": "2025.03.01",
@@ -563,7 +563,7 @@
   {
     "id": 57,
     "title": "창비어린이 87호(2024년 겨울호)",
-    "author": "",
+    "author": "창비어린이",
     "image": "/images/books/241127_91083a8a-3b8e-46b5-a40e-39ec5b209a73.jpg",
     "series": "",
     "date": "2024.12.01",
@@ -683,7 +683,7 @@
   {
     "id": 69,
     "title": "창비어린이 86호(2024년 가을호)",
-    "author": "",
+    "author": "창비어린이",
     "image": "/images/books/240902_95999269-3c3d-4959-ad2f-ea875b090c12.jpg",
     "series": "",
     "date": "2024.08.01",
@@ -1209,5 +1209,45 @@
     "date": "2023.10.15",
     "price": "13,000원",
     "category": "문학"
+  },
+  {
+    "id": 122,
+    "title": "창비 한국사상선 1차분 전기편(1~5권)",
+    "author": "창비 한국사상선 간행위원회",
+    "image": "/images/books/240718_073ad4fc-2515-49fd-a070-df8a558ccfa4.jpg",
+    "series": "창비 한국사상서",
+    "date": "2023.10.07",
+    "price": "110,000원",
+    "category": "인문교양"
+  },
+  {
+    "id": 123,
+    "title": "창비 한국사상선 1차분 후기편(16~20권)",
+    "author": "창비 한국사상선 간행위원회",
+    "image": "/images/books/240718_4267c4b5-fc65-40d6-8e8c-a70ca658709c.jpg",
+    "series": "창비 한국사상서",
+    "date": "2023.10.07",
+    "price": "112,000원",
+    "category": "인문교양"
+  },
+  {
+    "id": 124,
+    "title": "창비 한국사상선 1차분(1~5권, 16~20권)",
+    "author": "창비 한국사상선 간행위원회",
+    "image": "/images/books/240718_c46f754c-27c7-452c-bb69-6682b6784474.jpg",
+    "series": "창비 한국사상서",
+    "date": "2023.10.07",
+    "price": "222,000원",
+    "category": "인문교양"
+  },
+  {
+    "id": 125,
+    "title": "한결같되 날로 새롭게: 창비 50년사",
+    "author": "창비 50년사 편찬위원회",
+    "image": "/images/books/20160223_104127_thumb.jpg",
+    "series": "",
+    "date": "2016.02.24",
+    "price": "30,000원",
+    "category": "인문교양"
   }
 ]

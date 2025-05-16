@@ -1,3 +1,4 @@
+//app /components /search-result /Books.tsx
 import Link from 'next/link';
 import React from 'react';
 
@@ -16,7 +17,7 @@ type BooksProps = {
 
 export default function Books({ data }: BooksProps) {
   return (
-    <ul className="mt-[70px] grid grid-cols-3 justify-between items-baseline gap-y-[70px] gap-x-[20px]">
+    <ul className="mt-[70px] grid grid-cols-3 justify-between items-baseline gap-y-[70px] gap-x-[20px] max-sm:grid-cols-2">
       {data.map(
         (book: {
           id: number;

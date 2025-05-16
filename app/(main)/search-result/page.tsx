@@ -3,7 +3,6 @@
 
 import Pagination from '@/app/components/Pagination';
 import { useQuery } from '@tanstack/react-query';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { use, useEffect, useRef, useState } from 'react';
 import Books from '@/app/components/search-result/Books';
@@ -20,6 +19,7 @@ export default function SearchResult({
   const paramsObj = use(searchParams);
   const [params] = useState(new URLSearchParams(paramsObj));
 
+  // 주소에 있는 값을 가져옴
   const initialSearch = params.get('searchCategory') || 'books';
 
   const [page, setPage] = useState(parseInt(params.get('page') || '1', 10));
@@ -37,7 +37,6 @@ export default function SearchResult({
       ).then((res) => res.json());
     },
   });
-  console.log(data);
 
   // data 변경시 totalPage 계산
   useEffect(() => {
@@ -89,13 +88,13 @@ export default function SearchResult({
             검색
           </h2>
         </div>
-        <div className="flex items-start justify-between">
-          <div className="mt-[60px] mr-[150px] max-md:mr-0 max-md:flex max-md:gap-[12px] max-md:w-full max-md:mt-[24px] max-md:absolute max-md:top-0 max-md:-left-[80px] max-md:pl-[80px] max-md:pr-[80px] max-sm:-left-[28px] max-sm:pl-[28px] max-sm:pr-[28px] max-sm:flex-wrap">
+        <div className="flex items-start justify-between max-md:block max-md:relative max-md:pt-[66px]">
+          <div className="mt-[60px] max-md:flex max-md:gap-[12px] max-md:w-full max-md:mt-[24px] max-md:absolute max-md:top-0 max-md:-left-[80px] max-md:pl-[80px] max-md:pr-[80px]">
             {buttonLabels.map((label, index) => (
               <button
                 key={index}
                 type="button"
-                className={`block h-[42px] w-[204px] pl-[25px] ml-[1px] leading-[42px] -tracking-widest rounded-[10px] mb-[20px] text-left max-md:w-auto max-md:pl-[22px] max-md:pr-[22px] max-md:mb-0 max-md:shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px] ${
+                className={`block h-[42px] w-[204px] pl-[25px] ml-[1px] leading-[42px] -tracking-widest rounded-[10px] mb-[20px] text-left max-md:w-auto max-md:pl-[25px] max-md:pr-[25px] max-md:mb-0 max-md:shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:px-[18px] ${
                   (label === '도서' && search === 'books') ||
                   (label === '저자' && search === 'authors') ||
                   (label === '새소식' && search === 'news')
@@ -108,8 +107,8 @@ export default function SearchResult({
               </button>
             ))}
           </div>
-          <div>
-            <div className="w-[964px] max-md:mt-[36px] max-md:w-full">
+          <div className="w-[964px] max-[1500px]:w-[760px] max-[1300px]:w-[670px] max-md:w-full">
+            <div className="w-full max-md:mt-[36px] max-sm:mt-[12px]">
               <form
                 onSubmit={handleKeyword}
                 className="relative w-full h-[70px] border-b-[4px] border-b-gray-500 max-sm:h-auto max-sm:border max-sm:border-[#e6e6e6] max-sm:rounded-[10px]"
@@ -129,33 +128,52 @@ export default function SearchResult({
               </form>
             </div>
             <div>
-              {!paramsObj.keyword && (
+              {!paramsObj.keyword ? (
                 <div className="w-full h-[300px] flex justify-center items-center flex-col text-center">
-                  <h1 className="text-[20px] leading-[34px] -tracking-wider font-medium">
+                  <h1 className="text-[20px] leading-[34px] -tracking-wider font-medium max-sm:text-[16px] max-sm:leading-[26px]">
                     검색어를 입력해주세요.
                   </h1>
                 </div>
-              )}
-              <div>
-                {isPending && <p>Loading...</p>}
-                {isError && <p>{error.message}</p>}
-                {search === 'books' && data?.result?.length > 0 && (
-                  <Books data={data.result} />
-                )}
-                {search === 'authors' && <Authors data={data} />}
-                {search === 'news' && data?.result?.length > 0 && (
-                  <News data={data.result} />
-                )}
-                <div className="mt-[134px]">
-                  {data && data?.result?.length > 0 && (
-                    <Pagination
-                      page={page}
-                      setPage={setPage}
-                      totalPage={totalPage}
-                    />
-                  )}
+              ) : data?.length === 0 ? (
+                <div className="w-full h-[300px] flex justify-center items-center flex-col text-center">
+                  <h1 className="text-[20px] leading-[34px] font-medium max-sm:text-[16px] max-sm:leading-[26px]">
+                    검색 결과가 없습니다.
+                  </h1>
+                  <h4 className="text-[14px] leading-[28px] max-sm:leading-[26px]">
+                    다른 카테고리의 검색 결과도 확인해 보세요.
+                  </h4>
                 </div>
-              </div>
+              ) : (
+                <div>
+                  {isPending && (
+                    <div className="w-full h-[300px] flex justify-center items-center flex-col text-center">
+                      <h1 className="text-[20px] leading-[34px] font-medium max-sm:text-[16px] max-sm:leading-[26px]">
+                        검색 결과를 불러오고 있습니다.
+                      </h1>
+                      <h4 className="text-[14px] leading-[28px] max-sm:leading-[26px]">
+                        잠시만 기다려주세요
+                      </h4>
+                    </div>
+                  )}
+                  {isError && <p>{error.message}</p>}
+                  {search === 'books' && data?.result?.length > 0 && (
+                    <Books data={data.result} />
+                  )}
+                  {search === 'authors' && <Authors data={data} />}
+                  {search === 'news' && data?.result?.length > 0 && (
+                    <News data={data.result} />
+                  )}
+                  <div className="mt-[134px]">
+                    {data && data?.result?.length > 0 && (
+                      <Pagination
+                        page={page}
+                        setPage={setPage}
+                        totalPage={totalPage}
+                      />
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

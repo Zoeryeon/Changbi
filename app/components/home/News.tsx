@@ -12,7 +12,6 @@ export default function News() {
     },
   });
 
-  console.log(data, '==');
   const homeNews = data?.slice(0, 5) || [];
 
   return (

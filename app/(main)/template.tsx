@@ -1,4 +1,4 @@
-// app/(main)/layout.tsx
+// app/(main)/template.tsx
 'use client';
 
 import Header from '@/app/components/home/Header';

@@ -1,3 +1,4 @@
+//app /components /search-result /Authors.tsx
 import Link from 'next/link';
 import React from 'react';
 
@@ -17,7 +18,7 @@ export default function Authors({ data }: AuthorsProps) {
           <li key={author.id} className="relative">
             <Link
               href="/authorDetail"
-              className="w-[260px] flex flex-nowrap max-[1500px]:w-full max-[1500px]:mb-[20px]"
+              className="w-[260px] flex flex-nowrap max-[1500px]:w-full max-[1500px]:mb-[20px] hover:underline"
             >
               <div className="w-[70px] h-[70px] rounded-[8px] overflow-hidden max-sm:w-[50px] max-sm:h-[50px]">
                 <img
@@ -26,7 +27,7 @@ export default function Authors({ data }: AuthorsProps) {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="flex flex-col ml-[20px] w-[170px] justify-center max-sm:ml-[14px] max-sm:w-[calc(100%-64px)]">
+              <div className="flex flex-col ml-[20px] w-[170px] justify-center max-[1500px]:w-auto max-sm:ml-[14px] max-sm:w-[calc(100%-64px)]">
                 <h4 className="w-full text-ellipsis overflow-hidden whitespace-nowrap text-[20px] leading-[34px] font-medium tracking-tight max-sm:text-[16px] max-sm:leading-[26px] max-sm:tracking-normal">
                   {author.name}
                 </h4>

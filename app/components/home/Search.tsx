@@ -1,12 +1,31 @@
 //app /components /home /Search.tsx
+'use client';
+
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
-type SearchProps = {
-  toSearchResult: () => void;
-};
+export default function Search() {
+  const router = useRouter();
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  const paramsObj = useSearchParams();
+  const search = paramsObj.get('keyword') || '';
+  const [val, setVal] = useState(search);
 
-export default function Search({ toSearchResult }: SearchProps) {
+  // 즉시반영
+  useEffect(() => {
+    setVal(search);
+  }, [search]);
+
+  // 주소 이동하기
+  function handleSearch(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const value = inputRef.current?.value;
+    router.push(`/search-result?page=1&searchCategory=books&keyword=${value}`);
+  }
+
   return (
     <div>
       <div className="absolute right-[60px] max-[1400px] top-1/2 -translate-y-1/2 max-md:hidden">
@@ -59,16 +78,18 @@ export default function Search({ toSearchResult }: SearchProps) {
           </Link>
         </div>
         <div className="relative w-[200px] mt-[5px]">
-          <form>
+          <form onSubmit={handleSearch}>
             <input
+              ref={inputRef}
               type="search"
               className="w-[200px] h-[30px] bg-point1 rounded-[10px] px-[16px] border-0 text-[14px] leading-[28px] hover:bg-[#e7e7e8]"
               autoComplete="off"
+              value={val}
+              onChange={(e) => setVal(e.target.value)}
             />
             <button
               type="submit"
               className="w-[54px] h-[30px] right-0 top-0 absolute bg-point1 rounded-tr-[10px] rounded-br-[10px] place-items-center hover:bg-[#e7e7e8]"
-              onClick={toSearchResult}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
