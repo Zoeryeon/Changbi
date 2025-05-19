@@ -60,6 +60,18 @@ export const newsHandlers = [
     const result = getDataByPage(news, page, 5);
     return HttpResponse.json(result);
   }),
+
+  // recruit 에서 사용
+  http.get('http://localhost:9090/recruit', async () => {
+    await sleep(200);
+
+    // 날짜 기준 내림차순 정렬, 상위 3개 추출
+    const sortedNews = news
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 3);
+
+    return HttpResponse.json(sortedNews);
+  }),
 ];
 
 async function sleep(timeout: number) {

@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "group": "그룹사",
+    "name": "미디어창비",
+    "contents": "독자의 경험을 확장하는 출판과 기술의 융합\n도서 출판과 오디오북, 전자책, 앱 개발까지\n다양한 디지털콘텐츠 사업을 진행합니다",
+    "logo": "/images/community/미디어창비.e197bc6.png",
+    "href": "http://www.mediachangbi.com/"
+  },
+  {
+    "id": 2,
+    "group": "그룹사",
+    "name": "창비교육",
+    "contents": "초중고등학교 교과서, 참고서 등\n교육 출판 사업으로 내디딘 \n창비교육의 발걸음은 전진을 계속합니다",
+    "logo": "/images/community/창비교육.c4f1c42.png",
+    "href": "http://www.changbiedu.com/"
+  },
+  {
+    "id": 3,
+    "group": "도서관/학교",
+    "name": "책씨앗",
+    "contents": "작가, 도서관, 독자, 출판사, 서점이 함께 만드는 독서 문화 플랫폼\n책과 사람이 중심이 되는 만남과 교류를 만듭니다",
+    "logo": "/images/community/책씨앗.c87544f.png",
+    "href": "https://www.bookseed.kr/"
+  },
+  {
+    "id": 4,
+    "group": "도서관/학교",
+    "name": "더책",
+    "contents": "스마트폰 시대, 종이책의 새로운 진화\n기존의 ‘더책’ 서비스와 오디오북을 함께 이용할 수 있는\n모바일 앱 플랫폼",
+    "logo": "/images/community/더책_가로형.8ba4394.png",
+    "href": "http://www.thechaek.com/"
+  },
+  {
+    "id": 5,
+    "group": "도서관/학교",
+    "name": "오디오스쿨",
+    "contents": "선생님과 학생들을 위해 탄생한 무제한 스트리밍 서비스\n전문 성우가 낭독한 완독형 오디오북",
+    "logo": "/images/community/오디오스쿨_140.86b9ba8.png",
+    "href": "https://audioschool.kr"
+  },
+  {
+    "id": 6,
+    "group": "도서관/학교",
+    "name": "창비교육연수원",
+    "contents": "가장 지혜로운 사람, 선생님을 위한 교원 연수 플랫폼\n차별화된 강좌를 다양한 혜택과 함께 제공합니다",
+    "logo": "/images/community/창비교육연수원_140.cdbac0e.png",
+    "href": "https://teacher.changbiedu.com/"
+  },
+  {
+    "id": 7,
+    "group": "대관",
+    "name": "창비서교빌딩",
+    "contents": "창비서교빌딩의 강의실, 회의실 대관 서비스\n창비와 함께하는 어울림의 장소로 안내합니다",
+    "logo": "/images/community/건물.88e3e60.png",
+    "href": "http://changbi.net/"
+  },
+  {
+    "id": 8,
+    "group": "대관",
+    "name": "스튜디오 창비",
+    "contents": "최고 수준의 오디오 콘텐츠를 제작하는 전문 스튜디오\n축적된 노하우, 최고의 시설, 전문 성우와 함께하실 수 있습니다",
+    "logo": "/images/community/스튜디오.10d8cb4.png",
+    "href": "http://studio.changbi.com/"
+  },
+  {
+    "id": 9,
+    "group": "온오프 커뮤니티",
+    "name": "클럽창비",
+    "contents": "함께 생각하고, 읽고, 듣고, 쓰며\n점차 깊어져가는 사색의 즐거움을 경험해 보세요",
+    "logo": "/images/community/클럽창비.f87a063.svg",
+    "href": "https://club.changbi.com/"
+  },
+  {
+    "id": 10,
+    "group": "온오프 커뮤니티",
+    "name": "창비부산",
+    "contents": "부산 초량동에 위치한 책과 이야기가 머무는 공간\n독자, 선생님, 사서와 함께하는 독서·문화 체험 프로그램을 운영합니다",
+    "logo": "/images/community/창비부산.c77fe10.png",
+    "href": "https://www.instagram.com/changbibusan/"
+  },
+  {
+    "id": 11,
+    "group": "온오프 커뮤니티",
+    "name": "까페창비",
+    "contents": "일상을 깨우는 책과 커피\n창비서교빌딩 1층에 위치해 있습니다",
+    "logo": "/images/community/까페창비.ccebe61.png",
+    "href": "https://www.instagram.com/cafe_changbi/"
+  },
+  {
+    "id": 12,
+    "group": "온오프 커뮤니티",
+    "name": "시요일",
+    "contents": "세상의 모든 시詩, 당신을 위한 시 한편\n최초·최대의 시 큐레이션 검색 어플리케이션",
+    "logo": "/images/community/시요일.d93a1eb.png",
+    "href": "https://www.siyoil.com/"
+  },
+  {
+    "id": 13,
+    "group": "계간지",
+    "name": "창작과비평",
+    "contents": "우리나라 지성과 문학의 산 역사\n새로운 문학과 비판적 담론의 산실",
+    "logo": "/images/community/창작과비평.e6dd5af.png",
+    "href": "https://magazine.changbi.com/MCUser"
+  },
+  {
+    "id": 14,
+    "group": "계간지",
+    "name": "창비어린이",
+    "contents": "신선한 창작, 날카로운 비평, 유익한 정보로\n어린이 청소년 문학과 분화를 가꾸어 갑니다",
+    "logo": "/images/community/창비어린이.b63c177.png",
+    "href": "https://www.changbi.com/kidsMagazine"
+  }
+]

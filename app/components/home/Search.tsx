@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
@@ -10,7 +10,12 @@ export default function Search() {
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement | null>(null);
   const paramsObj = useSearchParams();
-  const search = paramsObj.get('keyword') || '';
+
+  // search-result주소가 아니면 가져오지 않기
+  let search = '';
+  if (usePathname() === '/search-result') {
+    search = paramsObj.get('keyword') || '';
+  }
   const [val, setVal] = useState(search);
 
   // 즉시반영
