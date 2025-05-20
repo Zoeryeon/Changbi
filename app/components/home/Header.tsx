@@ -110,7 +110,11 @@ export default function Header() {
           onMouseLeave={() => setGnbActive(false)}
         />
         <Search />
-        <div className="hidden max-md:block absolute right-[50px] max-sm:right-[60px] top-1/2 -translate-y-1/2">
+        <div
+          className={`hidden max-md:block absolute right-[50px] max-sm:right-[60px] top-1/2 -translate-y-1/2 transition-all duration-300 ${
+            menuOpen ? 'translate-x-[-252px]' : 'translate-x-0'
+          }`}
+        >
           <Link
             href="/search-result?page=1&searchCategory=books&keyword="
             className="w-[30px] h-[60px]"
@@ -118,7 +122,11 @@ export default function Header() {
             <img src="/images/mobilesearch.svg" alt="검색" />
           </Link>
         </div>
-        <div className="hidden max-sm:block absolute right-[28px] top-1/2 -translate-y-1/2">
+        <div
+          className={`hidden max-sm:block right-[28px] absolute top-1/2 -translate-y-1/2 transition-all duration-300 ${
+            menuOpen ? 'translate-x-[-252px]' : 'translate-x-0'
+          }`}
+        >
           <button
             type="button"
             className={`w-[30px] h-[60px] bg-no-repeat bg-[100%] scale-100 ${

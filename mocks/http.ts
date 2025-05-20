@@ -7,6 +7,7 @@ import { newsHandlers } from '@/mocks/news-handlers';
 import { authorsHandlers } from '@/mocks/authors-handler';
 import { searchHandlers } from '@/mocks/search-handlers';
 import { communityHandlers } from '@/mocks/community-handler';
+import { aboutHandlers } from '@/mocks/about-handlers';
 
 const app = express();
 const port = 9090; // 다른 곳에서 사용하지 않을만한 주소로 충돌 막아줌!
@@ -25,7 +26,8 @@ app.use(
     ...newsHandlers,
     ...authorsHandlers,
     ...searchHandlers,
-    ...communityHandlers
+    ...communityHandlers,
+    ...aboutHandlers
   )
 ); // MSW 핸들러 연결
 

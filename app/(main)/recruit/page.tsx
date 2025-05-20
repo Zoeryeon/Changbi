@@ -11,7 +11,6 @@ export default function page() {
       return fetch('http://localhost:9090/recruit').then((res) => res.json());
     },
   });
-  console.log(data);
 
   return (
     <main className="h-auto mt-[20px] pt-[148px] pb-[150px] max-sm:py-[90px]">

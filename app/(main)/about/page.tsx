@@ -1,6 +1,7 @@
 //app /(main) /about /page.tsx
 'use client';
 
+import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
 const yearList = [
@@ -15,35 +16,51 @@ const yearList = [
 
 export default function page() {
   const [year, setYear] = useState('2020s');
-  const [history, sethistory] = useState('2020s');
+  const [history, setHistory] = useState('2020s');
+
+  const { isPending, data, isError, error } = useQuery({
+    queryKey: ['about'],
+    queryFn: () => {
+      return fetch('http://localhost:9090/about').then((res) => res.json());
+    },
+  });
+  const yearData = data?.year ?? null;
+  const filteredYearData = yearData?.filter((item: { year: number }) =>
+    item.year.toString().startsWith(year.slice(0, 3))
+  );
+
+  const historyData = data?.history ?? null;
+  const filteredHistoryData = historyData?.filter((item: { year: number }) =>
+    item.year.toString().startsWith(history.slice(0, 3))
+  );
 
   function handleYear(selectedYear: string) {
     setYear(selectedYear);
   }
   function handleHistory(selectedHistory: string) {
-    sethistory(selectedHistory);
+    setHistory(selectedHistory);
   }
 
   return (
     <main>
-      <div className="flex flex-col h-[870px] bg-[url('/images/about-bg.png')] bg-no-repeat bg-center bg-cover text-center justify-center gap-y-[10px] mt-[80px]">
-        <h2 className="text-[40px] tracking-tight leading-[60px] font-bold">
+      <div className="flex flex-col h-[870px] bg-[url('/images/about-bg.png')] bg-no-repeat bg-center bg-cover text-center justify-center gap-y-[10px] mt-[80px] max-md:h-[calc(100vh-200px)] max-sm:bg-[url('/images/about-bg-mobile.png')] max-sm:pt-[60px] max-sm:mt-0">
+        <h2 className="text-[40px] tracking-tight leading-[60px] font-bold max-sm:text-[28px] max-sm:leading-[40px] max-sm:tracking-tight max-sm:break-keep">
           한결같되
           <br />
           날로 새롭게
         </h2>
-        <p className="text-[20px] leading-[43px] tracking-tight">
+        <p className="text-[20px] leading-[43px] tracking-tight max-sm:text-[16px] max-sm:leading-[26px] max-sm:tracking-normal">
           독자와 함께 더 나은 세상을
         </p>
       </div>
-      <div className="flex items-start justify-end gap-[92px] border-t border-t-[#e6e6e6] pt-[150px] text-justify break-all m-auto px-[130px] max-[1800px]:px-[100px] max-[1600px]:px-[80px] max-[1500px]:px-[60px] pb-[150px]">
+      <div className="flex items-start justify-end gap-[92px] border-t border-t-[#e6e6e6] pt-[150px] text-justify break-all m-auto px-[130px] max-[1800px]:px-[100px] max-[1600px]:px-[80px] max-[1500px]:px-[60px] pb-[150px] max-md:py-[66px] max-md:block max-md:relative max-sm:pt-[90px] max-sm:px-[28px]">
         <div>
-          <h2 className="text-right text-[40px] tracking-tight leading-[60px] break-keep font-bold">
+          <h2 className="text-right text-[40px] tracking-tight leading-[60px] break-keep font-bold max-md:text-left max-sm:text-[28px] max-sm:leading-[40px] max-sm:font-medium">
             창비는
           </h2>
         </div>
-        <div className="w-[964px] leading-[32px] tracking-tight">
-          <p className="mb-[60px]">
+        <div className="w-[964px] max-[1600px]:w-[860px] max-[1500px]:w-[760px] max-[1300px]:w-[670px] leading-[32px] tracking-tight max-md:mt-[35px] max-md:w-full max-sm:mt-[12px]">
+          <p className="mb-[60px] max-sm:text-[14px] max-sm:leading-[26px]">
             한국의 종합출판사로서 문학, 인문, 교양, 어린이, 청소년, 그림책 등
             다양한 분야의 양서를 출간하고 있습니다. 또한 교과서 발행, 미디어
             서비스 제공, 강좌 운영 등을 통해 새로운 지식문화 창조에 힘쓰고
@@ -51,10 +68,10 @@ export default function page() {
             뛰어난 작품을 생산해낼 수 있도록 지원하며, 책을 매개로 더 나은
             세상을 만들어나가는 데 이바지하고자 합니다.
           </p>
-          <strong className="font-medium leading-[32px]">
+          <strong className="font-medium leading-[32px] max-sm:text-[14px] max-sm:leading-[26px]">
             새로운 문학과 비판적 담론의 산실
           </strong>
-          <p className="mb-[60px]">
+          <p className="mb-[60px] max-sm:text-[14px] max-sm:leading-[26px]">
             창비의 연원은 1966년 1월 창간된 계간 『창작과비평』으로 거슬러
             올라갑니다. 창간편집인 백낙청 등의 주도로 시작된 『창작과비평』은
             최초 서울 종로구 공평동에 자리한 문우출판사의 이름을 빌려
@@ -74,10 +91,10 @@ export default function page() {
             분화·확장했습니다. 특히 독자들의 꾸준한 관심과 사랑을 받는 화제작을
             필두로 청소년문학의 새로운 장을 열었다는 평가를 받고 있습니다.
           </p>
-          <strong className="font-medium leading-[32px]">
+          <strong className="font-medium leading-[32px] max-sm:text-[14px] max-sm:leading-[26px]">
             과감한 도전과 혁신을 통한 도약
           </strong>
-          <p className="mb-[60px]">
+          <p className="mb-[60px] max-sm:text-[14px] max-sm:leading-[26px]">
             21세기 창비의 도전과 혁신은 이어져오고 있습니다. 2003년 회사명을
             ‘창작과비평사’에서 ‘창비’로 바꾸고 파주출판단지에 새로운 터를
             잡았습니다. 이곳에서 창비는 한국문학에 새로운 물결을 일으키는 작품을
@@ -96,10 +113,10 @@ export default function page() {
             독자들을 위한 문화교류 네트워크인 ‘창비부산’에 이르기까지, 현재
             창비는 온오프라인에서 독자들과 다양한 접점을 만들어가고 있습니다.
           </p>
-          <strong className="font-medium leading-[32px]">
+          <strong className="font-medium leading-[32px] max-sm:text-[14px] max-sm:leading-[26px]">
             독자와 함께, 새 문명 창조를 위하여
           </strong>
-          <p className="mb-[60px]">
+          <p className="max-sm:text-[14px] max-sm:leading-[26px]">
             지난 50여년 창비의 곁에는 늘 수많은 저자와 독자가 있었습니다. 이러한
             성원 덕분에 창비는 동력을 잃지 않았으며, 새로운 문학의 산실이자
             창조적인 담론 생산의 장으로 성장했습니다.
@@ -112,17 +129,17 @@ export default function page() {
           </p>
         </div>
       </div>
-      <div className="flex items-start justify-end gap-[92px] border-t border-t-[#e6e6e6] pt-[150px] text-justify break-all m-auto px-[130px] max-[1800px]:px-[100px] max-[1600px]:px-[80px] max-[1500px]:px-[60px] pb-[150px]">
+      <div className="flex items-start justify-end gap-[92px] border-t border-t-[#e6e6e6] pt-[150px] text-justify break-all m-auto px-[130px] max-[1800px]:px-[100px] max-[1600px]:px-[80px] max-[1500px]:px-[60px] pb-[150px] max-md:py-[66px] max-md:block max-md:relative  max-sm:px-[28px]">
         <div>
-          <h2 className="text-right text-[40px] tracking-tight leading-[60px] break-keep font-bold">
+          <h2 className="text-right text-[40px] tracking-tight leading-[60px] break-keep font-bold max-md:text-left max-sm:text-[28px] max-sm:leading-[40px] max-sm:font-medium">
             연혁
           </h2>
-          <div className="mt-[80px]">
+          <div className="mt-[80px] max-md:-left-[20px] max-md:top-[132px] max-md:flex max-md:gap-[12px] max-md:w-screen max-md:absolute max-md:px-[80px] max-md:flex-wrap max-md:mt-[10px] max-sm:left-0 max-sm:px-[28px] max-sm:top-[108px]">
             {yearList.map((item) => (
               <button
                 key={item}
                 type="button"
-                className={`block h-[42px] w-[204px] pl-[25px] leading-[42px] rounded-[10px] mb-[20px] ml-[1px] text-left ${
+                className={`block h-[42px] w-[204px] pl-[25px] leading-[42px] rounded-[10px] mb-[20px] ml-[1px] text-left max-md:w-auto max-md:pr-[25px] max-md:mb-0 shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:py-0 max-sm:px-[18px] ${
                   year === item
                     ? 'bg-[#2c3338] text-white'
                     : 'bg-point1 hover:bg-[#e7e7e8]'
@@ -134,42 +151,36 @@ export default function page() {
             ))}
           </div>
         </div>
-        <div className="w-[964px] leading-[32px] border-l border-l-[#e6e6e6] min-h-[700px] pl-[90px]">
-          <div className="mb-[60px]">
-            <h3 className="leading-[44px] mb-[2px] text-[30px] font-medium">
-              2024
-            </h3>
-            <p className=" leading-[32px] tracking-tight">
-              7월 창비 60주년 기념 ‘창비 한국사상선’ 1차분 10종 출간. 10월
-              본사에서 『채식주의자』 『소년이 온다』를 출간한 한강 소설가
-              노벨문학상 수상. 김해자 시집 『니들의 시간』 5·18문학상 본상 수상.
-              임형택 『실사구시의 한국학』 제5회 한국학저술상 수상. 『순한
-              먼지들의 책방』을 출간한 정우영 시인 제21회 이육사 시문학상 수상.
-              최은미 장편소설 『마주』, 신철규 시집 『심장보다 높이』 제22회
-              유심상 수상. 황유원 시집 『하얀 사슴 연못』 제24회 노작문학상
-              수상. 박현민 그림책 『진정한 친구가 되는 법』 2024 대한민국
-              그림책상 대상 수상. 이영광 시집 『살 것만 같던 마음』 제26회
-              백석문학상 수상. 권선희 시집 『푸른 바다 검게 울던 물의 말』
-              제16회 구상문학상 수상. 『알로하, 나의 엄마들』을 출간한 이금이
-              소설가 대한민국 문화예술상 수상. 김동수 그림책 『오늘의 할 일』
-              제65회 한국출판문화상 어린이·청소년 부문 수상
-            </p>
-          </div>
+        <div className="w-[964px] max-[1600px]:w-[860px] max-[1500px]:w-[760px] max-[1300px]:w-[670px] leading-[32px] border-l border-l-[#e6e6e6] min-h-[700px] pl-[90px] max-md:border-0 max-md:pl-0 max-md:min-h-[540px] max-md:mt-[80px] max-[911px]:mt-[125px] max-md:w-full max-sm:mt-[70px] max-[667px]:mt-[110px] max-[400px]:mt-[150px]">
+          {isPending && <p>Loading...</p>}
+          {isError && <p>{error.message}</p>}
+          {filteredYearData?.map(
+            (item: { id: number; year: number; contents: string }) => (
+              <div key={item.id} className="mb-[60px] max-md:mb-[50px]">
+                <h3 className="leading-[44px] mb-[2px] text-[30px] font-medium break-keep max-sm:text-[28px]">
+                  {item.year}
+                </h3>
+                <p className=" leading-[32px] tracking-tight max-sm:text-[14px] max-sm:leading-[26px]">
+                  {item.contents}
+                </p>
+              </div>
+            )
+          )}
         </div>
       </div>
-      <div className="flex items-start justify-end gap-[92px] border-t border-t-[#e6e6e6] pt-[150px] text-justify break-all m-auto px-[130px] max-[1800px]:px-[100px] max-[1600px]:px-[80px] max-[1500px]:px-[60px] pb-[150px]">
+      <div className="flex items-start justify-end gap-[92px] border-t border-t-[#e6e6e6] pt-[150px] text-justify break-all m-auto px-[130px] max-[1800px]:px-[100px] max-[1600px]:px-[80px] max-[1500px]:px-[60px] pb-[150px] max-md:py-[66px] max-md:block max-md:relative max-sm:px-[28px]">
         <div>
-          <h2 className="text-right text-[40px] tracking-tight leading-[60px] break-keep font-bold">
+          <h2 className="text-right text-[40px] tracking-tight leading-[60px] break-keep font-bold max-md:text-left max-sm:text-[28px] max-sm:leading-[40px] max-sm:font-medium">
             사진으로 보는
             <br />
             창비의 역사
           </h2>
-          <div className="mt-[80px]">
+          <div className="mt-[80px] max-md:-left-[20px] max-md:top-[132px] max-md:flex max-md:gap-[12px] max-md:w-screen max-md:absolute max-md:px-[80px] max-md:flex-wrap max-md:mt-[65px] max-sm:left-0 max-sm:px-[28px] max-sm:top-[90px]">
             {yearList.map((item) => (
               <button
                 key={item}
                 type="button"
-                className={`block h-[42px] w-[204px] pl-[25px] leading-[42px] rounded-[10px] mb-[20px] ml-[1px] text-left ${
+                className={`block h-[42px] w-[204px] pl-[25px] leading-[42px] rounded-[10px] mb-[20px] ml-[1px] text-left max-md:w-auto max-md:pr-[25px] max-md:mb-0 shrink-0 max-sm:h-[34px] max-sm:text-[14px] max-sm:leading-[34px] max-sm:py-0 max-sm:px-[18px] ${
                   history === item
                     ? 'bg-[#2c3338] text-white'
                     : 'bg-point1 hover:bg-[#e7e7e8]'
@@ -181,23 +192,55 @@ export default function page() {
             ))}
           </div>
         </div>
-        <div className="w-[964px] leading-[32px] border-l border-l-[#e6e6e6] min-h-[700px] pl-[90px]">
-          <div className="mb-[60px]">
-            <h3 className="leading-[44px] mb-[2px] text-[30px] font-medium">
-              2022년 1월 1일
-            </h3>
-            <img
-              src="/images/220101.jpg"
-              alt="역사"
-              className="max-w-full max-h-[354px]"
-            />
-            <h4 className="leading-[32px] font-medium">
-              『창작과비평』 신임 주간·부주간 취임
-            </h4>
-            <span className=" leading-[32px] tracking-tight">
-              왼쪽부터 이남주 주간, 황정아·백지연 부주간
-            </span>
-          </div>
+        <div className="w-[964px] max-[1600px]:w-[860px] max-[1500px]:w-[760px] max-[1300px]:w-[670px] leading-[32px] border-l border-l-[#e6e6e6] min-h-[700px] pl-[90px] max-md:border-0 max-md:pl-0 max-md:min-h-[540px] max-md:mt-[80px] max-[911px]:mt-[125px] max-md:w-full max-sm:mt-[70px] max-[667px]:mt-[110px] max-[400px]:mt-[150px]">
+          {filteredHistoryData?.map(
+            (item: {
+              id: number;
+              year: number;
+              month: number;
+              day: number;
+              img: string;
+              img2: string;
+              title: string;
+              explanation: string;
+              explanation2: string;
+            }) => (
+              <div key={item.id} className="mb-[60px] max-md:mb-[50px]">
+                <h3 className="leading-[44px] mb-[2px] text-[30px] font-medium break-keep max-sm:text-[28px]">
+                  {item.year}
+                  {item.month ? `년 ${item.month}월` : '년'}
+                  {item.day ? ` ${item.day}일` : ''}
+                </h3>
+                <img
+                  src={item.img}
+                  alt="역사"
+                  className="max-w-full max-h-[354px]"
+                />
+                <h4 className="leading-[32px] font-medium max-sm:text-[14px] max-sm:leading-[26px]">
+                  {item.title}
+                </h4>
+                <span className="leading-[32px] tracking-tight max-sm:text-[14px] max-sm:leading-[26px]">
+                  {item.explanation}
+                </span>
+                {item.img2 && (
+                  <div className="mt-[60px] max-md:mt-[50px]">
+                    <img
+                      src={item.img2}
+                      alt="역사2"
+                      className="max-w-full max-h-[354px]"
+                    />
+                    {/* dangerouslySetInnerHTML사용하는 경우 내용을 직접 넣지 않음 */}
+                    <span
+                      className="block leading-[32px] tracking-tight max-sm:text-[14px] max-sm:leading-[26px]"
+                      dangerouslySetInnerHTML={{
+                        __html: item.explanation2.replace(/\n/g, '<br />'),
+                      }}
+                    ></span>
+                  </div>
+                )}
+              </div>
+            )
+          )}
         </div>
       </div>
     </main>
