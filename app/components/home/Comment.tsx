@@ -69,7 +69,7 @@ export default function Comment() {
             ))}
           </ul>
           <Link
-            href="/mailingApply"
+            href="/mailing-apply"
             className="inline-flex pr-[40px] leading-[36px] font-medium text-[14px] items-center hover:underline group mt-[10px] max-sm:font-normal"
           >
             주간논평 메일링 신청하기

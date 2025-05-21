@@ -393,14 +393,14 @@ input[type='checkbox']:checked + label::before {
   }
   .checkbox::before {
     content: '';
-    width: 18px;
-    height: 18px;
-    border: 1px solid #999;
+    width: 29px;
+    height: 29px;
+    background: url(/images/checked-false.svg) no-repeat 50% 50% / 100%;
     flex-shrink: 0;
   }
   /* :has - ios 15.4부터 지원 */
   .checkbox:has(input[type='checkbox']:checked)::before {
-    background: url(/images/common/check.svg) no-repeat 50% 50% / 100%;
+    background: url(/images/checked-true.svg) no-repeat 50% 50% / 100%;
   }
 
   /* radio 공통 */
