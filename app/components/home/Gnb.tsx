@@ -41,7 +41,7 @@ export default function Gnb({
       title: '매거진',
       subItems: [
         { name: '창작과비평', link: '/magazine' },
-        { name: '창비어린이', link: '/kidsMagazine' },
+        { name: '창비어린이', link: '/kids-magazine' },
       ],
     },
     {
@@ -62,7 +62,7 @@ export default function Gnb({
 
   return (
     <nav
-      className="after:absolute after:left-0 after:top-0 after:w-full after:h-0 after:bg-white after:-z-1 after:transition-all after:duration-300 after:border-b after:border-b-[#e6e6e6] hover:after:h-[290px]"
+      className="after:absolute after:-left-[3000px] after:-right-[3000px] after:top-0 after:h-0 after:bg-white after:-z-1 after:transition-all after:duration-300 after:border-b after:border-b-[#e6e6e6] hover:after:h-[290px]"
       onMouseLeave={onMouseLeave}
     >
       <ul

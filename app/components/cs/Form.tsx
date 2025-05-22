@@ -177,7 +177,7 @@ export default function Form({
         메일 발송하기
         <img
           src="/images/whiterightarrow.svg"
-          alt="더보기"
+          alt="발송하기"
           className="ml-[6px] transition-transform group-hover:translate-x-1.5 group-hover:duration-300 group-hover:cursor-pointer mt-[6px]"
         />
       </button>

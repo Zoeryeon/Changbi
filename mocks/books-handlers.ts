@@ -62,6 +62,26 @@ export const booksHandlers = [
     const result = getDataByPage(books, page, 7);
     return HttpResponse.json(result);
   }),
+
+  http.get('http://localhost:9090/magazine', async () => {
+    await sleep(200);
+
+    const filteredData = books.filter((book) =>
+      book.title.includes('창작과비평')
+    );
+
+    return HttpResponse.json(filteredData);
+  }),
+
+  http.get('http://localhost:9090/kids-magazine', async () => {
+    await sleep(200);
+
+    const filteredData = books.filter((book) =>
+      book.title.includes('창비어린이')
+    );
+
+    return HttpResponse.json(filteredData);
+  }),
 ];
 
 async function sleep(timeout: number) {

@@ -1,4 +1,4 @@
-import React from 'react';
+//app /components /mailing-apply /Mail.tsx
 
 export default function Mail() {
   return (
