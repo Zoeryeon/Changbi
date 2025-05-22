@@ -5,7 +5,10 @@ import Link from 'next/link';
 type AuthorProps = {
   handleKeyword: (e: React.FormEvent<HTMLFormElement>) => void;
   inputRef: React.RefObject<HTMLInputElement | null>;
-  paramsObj: Record<string, string>;
+  paramsObj: {
+    tag: string;
+    keyword: string;
+  };
   isPending?: boolean;
   isError?: boolean;
   error?: any;
